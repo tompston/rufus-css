@@ -37,8 +37,8 @@
 
 ### Current setup:
 
-- 0-100, increment by 2
-- 100-600, increment by 5
+- 0-100, increment by 2px 
+- 100-600, increment by 5px
 
 | CLASS_NAME | CSS_PROPERTY  | NOTES                                       |
 | ---------- | ------------- | ------------------------------------------- |
