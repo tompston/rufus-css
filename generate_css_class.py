@@ -53,7 +53,7 @@ first_loop_increment = 2
 
 
 second_loop_first_value = 100
-second_loop_last_value = 602
+second_loop_last_value = 802
 second_loop_increment = 5
 
 css_unit = "px"
