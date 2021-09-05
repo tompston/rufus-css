@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview</title>
+    <style type="text/css">
+      @import url(./css/00_main.css);
+      @import url(./css/01_grid.css);
+      @import url(./css/gap.css);
+      @import url(./css/height.css);
+      @import url(./css/margin.css);
+      @import url(./css/padding.css);
+      @import url(./css/width.css);
+
+      .color_grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+    </style>
+  </head>
+  <body>
+    <!-- font-size -->
+
+    <div class="flex-center">
+      <div class="max-width-1">
+        <!-- font-size -->
+        <div class="fs-3 fw-700 pt-44">fs-x</div>
+        <!--  -->
+        <div class="fs-1">fs-1</div>
+        <div class="fs-2">fs-2</div>
+        <div class="fs-3">fs-3</div>
+        <div class="fs-4">fs-4</div>
+        <div class="fs-5">fs-5</div>
+        <div class="fs-6">fs-6</div>
+        <div class="fs-7">fs-7</div>
+        <div class="fs-8">fs-8</div>
+        <div class="fs-9">fs-9</div>
+        <!-- temp-bg-col- -->
+        <div class="fs-3 fw-700 pt-40 pb-10">temp-bg-col-x</div>
+        <div class="grid color_grid gap-10 text-col-1 text-1">
+          <div class="temp-bg-col-1 min-h-120 flex-center bord-rad-1">1</div>
+          <div class="temp-bg-col-2 min-h-120 flex-center bord-rad-1">2</div>
+          <div class="temp-bg-col-3 min-h-120 flex-center bord-rad-1">3</div>
+          <div class="temp-bg-col-4 min-h-120 flex-center bord-rad-1">4</div>
+          <div class="temp-bg-col-5 min-h-120 flex-center bord-rad-1">5</div>
+          <div class="temp-bg-col-6 min-h-120 flex-center bord-rad-1">6</div>
+        </div>
+
+        <!-- temp-bg-col- -->
+        <div class="fs-3 fw-700 pt-40 pb-10">bg-col-x</div>
+        <div class="grid color_grid gap-10 text-col-1 text-1">
+          <div class="bg-col-1 min-h-120 flex-center bord-rad-1 border-1">
+            1
+          </div>
+          <div class="bg-col-2 min-h-120 flex-center bord-rad-1 border-1">
+            2
+          </div>
+          <div class="bg-col-3 min-h-120 flex-center bord-rad-1 border-1">
+            3
+          </div>
+          <div class="bg-col-4 min-h-120 flex-center bord-rad-1 border-1">
+            4
+          </div>
+          <div class="bg-col-5 min-h-120 flex-center bord-rad-1 border-1">
+            5
+          </div>
+          <div
+            class="bg-col-5 min-h-120 flex-center bord-rad-1 border-1 shadow-3"
+          >
+            6
+          </div>
+        </div>
+
+        <!-- button-x -->
+        <div class="fs-3 fw-700 pt-40 pb-10">button-x</div>
+        <button class="button-1">1</button>
+
+        <div class="fs-3 fw-700 pt-40 pb-10 flex flex-column">border-x</div>
+        <div class="flex flex-row gap-20">
+          <div class="w-60 h-60 border-1 flex-center">1</div>
+          <div class="w-60 h-60 border-2 flex-center">2</div>
+          <div class="w-60 h-60 border-3 flex-center">3</div>
+        </div>
+
+        <!-- shadow-x -->
+        <div class="fs-3 fw-700 pt-40 pb-10 flex flex-column">shadow-x</div>
+        <div class="flex flex-row gap-20">
+          <div class="w-60 h-60 flex-center shadow-1">1</div>
+          <div class="w-60 h-60 flex-center shadow-2">2</div>
+          <div class="w-60 h-60 flex-center shadow-3">3</div>
+        </div>
+
+        <!-- text-x -->
+        <div class="fs-3 fw-700 pt-40 pb-10">text-x</div>
+        <div class="max-w-600">
+          <div class="text-1">
+            <div class="fs-6 fw-600 pt-6">text-1</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
+            esse facere ipsam ratione
+          </div>
+          <div class="text-2">
+            <div class="fs-6 fw-600 pt-6">text-2</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
+            esse facere ipsam ratione
+          </div>
+          <div class="fs-6 fw-600 pt-6">text-3</div>
+          <div class="text-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
+            esse facere ipsam ratione
+          </div>
+          <div class="fs-6 fw-600 pt-6">text-4</div>
+          <div class="text-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
+            esse facere ipsam ratione
+          </div>
+        </div>
+
+        <br />
+        <br />
+      </div>
+    </div>
+  </body>
+</html>

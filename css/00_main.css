@@ -22,7 +22,7 @@
   --bg-col-5: #ffffff;
   --bg-col-6: #ffffff;
   /* font-color */
-  --text-col-1: #ffffff;
+  --text-col-1: #000000;
   --text-col-2: #ffffff;
   --text-col-3: #ffffff;
   --text-col-4: #ffffff;
@@ -41,7 +41,7 @@
   --fs-8: 16px;
   --fs-9: 14px;
   /* border-radius*/
-  --bord-rad-1: 5px;
+  --bord-rad-1: 14px;
   --bord-rad-2: 5px;
   --bord-rad-3: 5px;
   --bord-rad-4: 5px;
@@ -51,7 +51,7 @@
 
 ::selection {
   color: white;
-  background-color: rgb(55, 125, 255);
+  background-color: rgb(126, 167, 243);
 }
 
 /* Changing predefined html stuff */
@@ -271,6 +271,9 @@ a:active {
 }
 .temp-bg-col-5 {
   background-color: #c3ceda57;
+}
+.temp-bg-col-6 {
+  background-color: #e8e8e857;
 }
 
 /* BORD_RAD */
@@ -533,40 +536,34 @@ a:active {
 }
 
 .border-1 {
-  border: 1px solid rgba(255, 255, 255, 0.301);
+  border: 1px solid rgba(48, 48, 48, 0.2);
 }
-
 .border-2 {
-  border: 1px solid rgba(255, 255, 255, 0.301);
+  border: 2px solid rgba(48, 48, 48, 0.15);
 }
-
 .border-3 {
-  border: 1px solid rgba(255, 255, 255, 0.301);
+  border: 3px solid rgba(48, 48, 48, 0.08);
 }
 
 .button-1 {
-  min-width: 116px;
-  min-height: 43px;
-  border: 1px solid rgba(0, 0, 0, 0.14);
+  min-width: 104px;
+  min-height: 40px;
   background: #000000;
   color: #fffffff1;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
-  border-radius: 5px;
-  /*  */
+  border-radius: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /*  */
   transition: all 0.09s ease-in;
 }
-
 .button-1:hover {
-  border: 1px solid rgba(0, 0, 0, 0);
-  background: #707070;
+  background: #a7a6a6;
 }
-
 .button-1:active {
+  /* disables transition on click */
+  transition: none;
   background: #171717;
   color: #ffffff;
 }
@@ -578,6 +575,32 @@ a:active {
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   user-select: none;
+}
+
+.transition-1 {
+  transition: all 0.08s ease-in;
+}
+
+.transition-2 {
+  transition: all 0.08s ease-in;
+}
+
+.transition-3 {
+  transition: all 0.08s ease-in;
+}
+
+/* 
+shadows taken from here, a lot of examples
+https://getcssscan.com/css-box-shadow-examples
+*/
+.shadow-1 {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.shadow-2 {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.shadow-3 {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
 @media screen and (max-width: 1200px) {

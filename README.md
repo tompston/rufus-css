@@ -32,12 +32,14 @@
 | both-100            | height: 100%; width: 100%;  |                                                                           |
 | z-10                | z-index                     | z-10, z-20, z-30, z-40 ,z-50                                              |
 | temp-bg-col-1       |                             | used when you don't have any colors defined for the root variables. (1-5) |
+| shadow-1            | box-shadow:                 | 1-3                                                                       |
+| transition-1        | transition:                 | 1-3                                                                       |
 
 ## Classes generated from python script
 
 ### Current setup:
 
-- 0-100, increment by 2px 
+- 0-100, increment by 2px
 - 100-600, increment by 5px
 
 | CLASS_NAME | CSS_PROPERTY  | NOTES                                       |
