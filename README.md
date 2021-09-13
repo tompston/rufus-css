@@ -95,7 +95,7 @@
 | ---------- | ------------ | ---------------------- |
 | border-1   | border       | 1-3                    |
 | button-1   | button       | 1                      |
-| hr-1       | border       | 1-2, class added to hr |
+| hr-1       | border       | 1-3, class added to hr |
 
 ## Other
 
