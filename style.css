@@ -1,4 +1,4 @@
-/* importing fonts */
+/* importing fonts example*/
 /* 
 @font-face {
   font-family: "Poppins-Bold";
@@ -21,6 +21,7 @@
   --bg-col-4: #ffffff;
   --bg-col-5: #ffffff;
   --bg-col-6: #ffffff;
+
   /* font-color */
   --text-col-1: #000000;
   --text-col-2: #ffffff;
@@ -28,20 +29,22 @@
   --text-col-4: #ffffff;
   --text-col-5: #ffffff;
   --text-col-6: #ffffff;
-  /* max-width for the main content*/
-  --max-width-1: 935px;
-  /* font-size */
-  --fs-1: 72px;
-  --fs-2: 46px;
-  --fs-3: 36px;
-  --fs-4: 28px;
+
+  --max-width-1: 935px; /* max-width for the main content*/
+
+  /* font-size, 1rem == 16px, clamp(MIN_VALUE, VALUE, MAX_VAL) */
+  --fs-1: clamp(4.5rem, 12vw + 1rem, 5.5rem);
+  --fs-2: clamp(3.2rem, 12vw + 1rem, 4rem);
+  --fs-3: clamp(2.25rem, 12vw + 1rem, 2.8rem);
+  --fs-4: clamp(1.75rem, 12vw + 1rem, 2rem);
   --fs-5: 22px;
   --fs-6: 20px;
   --fs-7: 18px;
   --fs-8: 16px;
   --fs-9: 14px;
-  /* border-radius*/
-  --bord-rad-1: 14px;
+
+  /* border-radius */
+  --bord-rad-1: 12px;
   --bord-rad-2: 5px;
   --bord-rad-3: 5px;
   --bord-rad-4: 5px;
@@ -49,17 +52,12 @@
   --bord-rad-6: 5px;
 }
 
-::selection {
-  color: white;
-  background-color: rgb(126, 167, 243);
-}
-
-/* Changing predefined html stuff */
+/* Changing predefined html properties */
 html {
   scroll-behavior: smooth;
   height: 100%;
   -webkit-text-size-adjust: 100%;
-  overflow-y: scroll; /* make the scrollbar not take up the total space of the page*/
+  overflow-y: scroll; /* make the scrollbar not take up the total space of the page */
   cursor: context-menu;
 }
 
@@ -73,12 +71,17 @@ body {
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
-/* 
+/* Other fonts
   font-family: "Helvetica", Arial, sans-serif;
   font-family: Inter, system-ui, sans-serif;
   font-family: Tenor Sans, Georgia, serif;
   font-family: Roboto Mono, Menlo, monospace;
-  */
+*/
+
+::selection {
+  color: white;
+  background-color: rgb(126, 167, 243);
+}
 
 h1,
 h2,
@@ -138,104 +141,55 @@ a:active {
   color: inherit;
 }
 
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* grid classes */
+.grid {
+  display: grid;
 }
-
 .grid-center {
   display: grid;
   place-content: center;
 }
 
-.grid {
-  display: grid;
+/* flex classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .flex {
   display: flex;
 }
-
 .flex-row {
   flex-direction: row;
 }
-
 .flex-column {
   flex-direction: column;
 }
-
 .flex-wrap {
   flex-wrap: wrap;
 }
-
 .flex-nowrap {
   flex-wrap: nowrap;
 }
 
-.z-10 {
-  z-index: 10;
-}
-
-.z-20 {
-  z-index: 20;
-}
-
-.z-30 {
-  z-index: 20;
-}
-.z-40 {
-  z-index: 40;
-}
-.z-50 {
-  z-index: 50;
-}
-
+/* height and width */
 .height-100 {
   height: 100%;
 }
-
 .width-100 {
   width: 100%;
 }
-
 .both-100 {
   width: 100%;
   height: 100%;
 }
 
-.round {
-  border-radius: 50%;
-}
-
-.img-cover {
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-justify {
-  text-align: justify;
-}
-
 /* classes dependent on the css variables */
-
 .max-width-1 {
   width: var(--max-width-1);
 }
 
-/* BG_COLORS */
+/* background-color */
 .bg-col-1 {
   background-color: var(--bg-col-1);
 }
@@ -256,7 +210,6 @@ a:active {
 }
 
 /* tw palette */
-
 .temp-bg-col-1 {
   background-color: #071330;
 }
@@ -276,7 +229,7 @@ a:active {
   background-color: #e8e8e857;
 }
 
-/* BORD_RAD */
+/* bord-rad */
 .bord-rad-1 {
   border-radius: var(--bord-rad-1);
 }
@@ -296,7 +249,7 @@ a:active {
   border-radius: var(--bord-rad-6);
 }
 
-/* FONT-FAMILY */
+/* font-family */
 .font-fam-1 {
   font-family: var(--font-fam-1);
 }
@@ -315,7 +268,8 @@ a:active {
 .font-fam-6 {
   font-family: var(--font-fam-6);
 }
-/* TEXT-COL */
+
+/* text-col */
 .text-col-1 {
   color: var(--text-col-1);
 }
@@ -335,7 +289,7 @@ a:active {
   color: var(--text-col-6);
 }
 
-/* FS */
+/* font-size */
 .fs-1 {
   font-size: var(--fs-1);
 }
@@ -363,35 +317,48 @@ a:active {
 .fs-9 {
   font-size: var(--fs-9);
 }
-/* FW */
-.fw-100 {
-  font-weight: 100;
+
+/* Define based on project */
+.header-1 {
+  font-size: var(--fs-1);
+  line-height: 1.4;
 }
-.fw-200 {
-  font-weight: 200;
+.header-2 {
+  font-size: var(--fs-2);
+  line-height: 1.45;
 }
-.fw-300 {
-  font-weight: 300;
+.header-3 {
+  font-size: var(--fs-3);
+  line-height: 1.545;
 }
-.fw-400 {
-  font-weight: 400;
+.header-4 {
+  font-size: var(--fs-4);
 }
-.fw-500 {
-  font-weight: 500;
+
+/* text */
+.text-1 {
+  font-size: var(--fs-6);
+  line-height: 1.6;
 }
-.fw-600 {
-  font-weight: 600;
+.text-2 {
+  font-size: var(--fs-7);
+  line-height: 1.62;
 }
-.fw-700 {
-  font-weight: 700;
+.text-3 {
+  font-size: var(--fs-8);
+  line-height: 1.688;
 }
-.fw-800 {
-  font-weight: 800;
+.text-4 {
+  font-size: var(--fs-9);
+  line-height: 1.688;
 }
-.fw-900 {
-  font-weight: 900;
+
+@media screen and (max-width: 1200px) {
+  .max-width-1 {
+    padding: 0px 40px;
+  }
 }
-/* OP */
+/* opacity */
 .op-0 {
   opacity: 0%;
 }
@@ -456,43 +423,33 @@ a:active {
   opacity: 100%;
 }
 
-.pointer {
-  cursor: pointer;
+/* font-weight */
+.fw-100 {
+  font-weight: 100;
 }
-
-/* Define based on project */
-.header-1 {
-  font-size: var(--fs-1);
-  line-height: 1.4;
+.fw-200 {
+  font-weight: 200;
 }
-.header-2 {
-  font-size: var(--fs-2);
-  line-height: 1.45;
+.fw-300 {
+  font-weight: 300;
 }
-.header-3 {
-  font-size: var(--fs-3);
-  line-height: 1.545;
+.fw-400 {
+  font-weight: 400;
 }
-.header-4 {
-  font-size: var(--fs-4);
+.fw-500 {
+  font-weight: 500;
 }
-/*  */
-
-.text-1 {
-  font-size: var(--fs-6);
-  line-height: 1.6;
+.fw-600 {
+  font-weight: 600;
 }
-.text-2 {
-  font-size: var(--fs-7);
-  line-height: 1.62;
+.fw-700 {
+  font-weight: 700;
 }
-.text-3 {
-  font-size: var(--fs-8);
-  line-height: 1.688;
+.fw-800 {
+  font-weight: 800;
 }
-.text-4 {
-  font-size: var(--fs-9);
-  line-height: 1.688;
+.fw-900 {
+  font-weight: 900;
 }
 
 /* Sizes taken from tw */
@@ -515,26 +472,80 @@ a:active {
   letter-spacing: -0.05em;
 }
 
-.italic {
-  font-style: italic;
+/* z-index */
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+.z-30 {
+  z-index: 20;
+}
+.z-40 {
+  z-index: 40;
+}
+.z-50 {
+  z-index: 50;
 }
 
-.underline {
-  text-decoration: underline;
+/* text-side */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
 }
 
-.hidden {
-  display: none;
+/* transition */
+.transition-1 {
+  transition: all 0.08s ease-in;
+}
+.transition-2 {
+  transition: all 0.08s ease-in;
+}
+.transition-3 {
+  transition: all 0.08s ease-in;
 }
 
+/* 
+  shadows taken from here, a lot of examples to choose from
+  https://getcssscan.com/css-box-shadow-examples
+*/
+.shadow-1 {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.shadow-2 {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.shadow-3 {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* hr */
 .hr-1 {
-  border: rgba(29, 29, 29, 0.11) 1px solid;
+  border: 0;
+  height: 1px;
+  background: rgba(29, 29, 29, 0.4);
 }
-
 .hr-2 {
-  border: rgba(29, 29, 29, 0.06) 2px solid;
+  border: 0;
+  height: 1px;
+  background: rgba(29, 29, 29, 0.2);
+}
+.hr-3 {
+  border: 0;
+  height: 1px;
+  background: rgba(29, 29, 29, 0.1);
 }
 
+/* border */
 .border-1 {
   border: 1px solid rgba(48, 48, 48, 0.2);
 }
@@ -545,6 +556,7 @@ a:active {
   border: 3px solid rgba(48, 48, 48, 0.08);
 }
 
+/* buttons */
 .button-1 {
   min-width: 104px;
   min-height: 40px;
@@ -562,10 +574,35 @@ a:active {
   background: #a7a6a6;
 }
 .button-1:active {
-  /* disables transition on click */
-  transition: none;
+  transition: none; /* disables transition on click */
   background: #171717;
   color: #ffffff;
+}
+
+/* other helper classes */
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.img-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .disable-text-select {
@@ -575,38 +612,6 @@ a:active {
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   user-select: none;
-}
-
-.transition-1 {
-  transition: all 0.08s ease-in;
-}
-
-.transition-2 {
-  transition: all 0.08s ease-in;
-}
-
-.transition-3 {
-  transition: all 0.08s ease-in;
-}
-
-/* 
-shadows taken from here, a lot of examples
-https://getcssscan.com/css-box-shadow-examples
-*/
-.shadow-1 {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.shadow-2 {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-.shadow-3 {
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-}
-
-@media screen and (max-width: 1200px) {
-  .max-width-1 {
-    padding: 0px 40px;
-  }
 }
 /* grid template rows */
 /* 1fr */

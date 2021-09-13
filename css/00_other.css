@@ -1,0 +1,255 @@
+/* opacity */
+.op-0 {
+  opacity: 0%;
+}
+.op-5 {
+  opacity: 5%;
+}
+.op-10 {
+  opacity: 10%;
+}
+.op-15 {
+  opacity: 15%;
+}
+.op-20 {
+  opacity: 20%;
+}
+.op-25 {
+  opacity: 25%;
+}
+.op-30 {
+  opacity: 30%;
+}
+.op-35 {
+  opacity: 35%;
+}
+.op-40 {
+  opacity: 40%;
+}
+.op-45 {
+  opacity: 45%;
+}
+.op-50 {
+  opacity: 50%;
+}
+.op-55 {
+  opacity: 55%;
+}
+.op-60 {
+  opacity: 60%;
+}
+.op-65 {
+  opacity: 65%;
+}
+.op-70 {
+  opacity: 70%;
+}
+.op-75 {
+  opacity: 75%;
+}
+.op-80 {
+  opacity: 80%;
+}
+.op-85 {
+  opacity: 85%;
+}
+.op-90 {
+  opacity: 90%;
+}
+.op-95 {
+  opacity: 95%;
+}
+.op-100 {
+  opacity: 100%;
+}
+
+/* font-weight */
+.fw-100 {
+  font-weight: 100;
+}
+.fw-200 {
+  font-weight: 200;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
+}
+
+/* Sizes taken from tw */
+.text-space-1 {
+  letter-spacing: 0.1em;
+}
+.text-space-2 {
+  letter-spacing: 0.05em;
+}
+.text-space-3 {
+  letter-spacing: 0.025em;
+}
+.text-space-4 {
+  letter-spacing: 0em;
+}
+.text-space-5 {
+  letter-spacing: -0.025em;
+}
+.text-space-6 {
+  letter-spacing: -0.05em;
+}
+
+/* z-index */
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+.z-30 {
+  z-index: 20;
+}
+.z-40 {
+  z-index: 40;
+}
+.z-50 {
+  z-index: 50;
+}
+
+/* text-side */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+
+/* transition */
+.transition-1 {
+  transition: all 0.08s ease-in;
+}
+.transition-2 {
+  transition: all 0.08s ease-in;
+}
+.transition-3 {
+  transition: all 0.08s ease-in;
+}
+
+/* 
+  shadows taken from here, a lot of examples to choose from
+  https://getcssscan.com/css-box-shadow-examples
+*/
+.shadow-1 {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.shadow-2 {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.shadow-3 {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* hr */
+.hr-1 {
+  border: 0;
+  height: 1px;
+  background: rgba(29, 29, 29, 0.4);
+}
+.hr-2 {
+  border: 0;
+  height: 1px;
+  background: rgba(29, 29, 29, 0.2);
+}
+.hr-3 {
+  border: 0;
+  height: 1px;
+  background: rgba(29, 29, 29, 0.1);
+}
+
+/* border */
+.border-1 {
+  border: 1px solid rgba(48, 48, 48, 0.2);
+}
+.border-2 {
+  border: 2px solid rgba(48, 48, 48, 0.15);
+}
+.border-3 {
+  border: 3px solid rgba(48, 48, 48, 0.08);
+}
+
+/* buttons */
+.button-1 {
+  min-width: 104px;
+  min-height: 40px;
+  background: #000000;
+  color: #fffffff1;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.09s ease-in;
+}
+.button-1:hover {
+  background: #a7a6a6;
+}
+.button-1:active {
+  transition: none; /* disables transition on click */
+  background: #171717;
+  color: #ffffff;
+}
+
+/* other helper classes */
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.img-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.disable-text-select {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
+}

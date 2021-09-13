@@ -8,6 +8,7 @@
     <style type="text/css">
       @import url(./css/00_main.css);
       @import url(./css/01_grid.css);
+      @import url(./css/00_other.css);
       @import url(./css/gap.css);
       @import url(./css/height.css);
       @import url(./css/margin.css);
@@ -17,16 +18,21 @@
       .color_grid {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       }
+
+      .class_name_header {
+        font-size: 44px;
+        font-weight: 700;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        background: rgb(248, 212, 173);
+      }
     </style>
   </head>
   <body>
-    <!-- font-size -->
-
     <div class="flex-center">
       <div class="max-width-1">
         <!-- font-size -->
-        <div class="fs-3 fw-700 pt-44">fs-x</div>
-        <!--  -->
+        <div class="class_name_header">fs-x</div>
         <div class="fs-1">fs-1</div>
         <div class="fs-2">fs-2</div>
         <div class="fs-3">fs-3</div>
@@ -37,43 +43,62 @@
         <div class="fs-8">fs-8</div>
         <div class="fs-9">fs-9</div>
         <!-- temp-bg-col- -->
-        <div class="fs-3 fw-700 pt-40 pb-10">temp-bg-col-x</div>
+        <div class="class_name_header">temp-bg-col-x</div>
         <div class="grid color_grid gap-10 text-col-1 text-1">
-          <div class="temp-bg-col-1 min-h-120 flex-center bord-rad-1">1</div>
-          <div class="temp-bg-col-2 min-h-120 flex-center bord-rad-1">2</div>
-          <div class="temp-bg-col-3 min-h-120 flex-center bord-rad-1">3</div>
-          <div class="temp-bg-col-4 min-h-120 flex-center bord-rad-1">4</div>
-          <div class="temp-bg-col-5 min-h-120 flex-center bord-rad-1">5</div>
-          <div class="temp-bg-col-6 min-h-120 flex-center bord-rad-1">6</div>
+          <div
+            class="temp-bg-col-1 min-h-135 flex-center bord-rad-1 text-col-2"
+          >
+            1
+          </div>
+          <div
+            class="temp-bg-col-2 min-h-135 flex-center bord-rad-1 text-col-2"
+          >
+            2
+          </div>
+          <div
+            class="temp-bg-col-3 min-h-135 flex-center bord-rad-1 text-col-2"
+          >
+            3
+          </div>
+          <div class="temp-bg-col-4 min-h-135 flex-center bord-rad-1">4</div>
+          <div class="temp-bg-col-5 min-h-135 flex-center bord-rad-1">5</div>
+          <div class="temp-bg-col-6 min-h-135 flex-center bord-rad-1">6</div>
         </div>
 
         <!-- temp-bg-col- -->
-        <div class="fs-3 fw-700 pt-40 pb-10">bg-col-x</div>
+        <div class="class_name_header">bg-col-x</div>
         <div class="grid color_grid gap-10 text-col-1 text-1">
-          <div class="bg-col-1 min-h-120 flex-center bord-rad-1 border-1">
+          <div
+            class="
+              bg-col-1
+              min-h-135
+              flex-center
+              bord-rad-1
+              border-1
+              text-col-2
+            "
+          >
             1
           </div>
-          <div class="bg-col-2 min-h-120 flex-center bord-rad-1 border-1">
+          <div class="bg-col-2 min-h-135 flex-center bord-rad-1 border-1">
             2
           </div>
-          <div class="bg-col-3 min-h-120 flex-center bord-rad-1 border-1">
+          <div class="bg-col-3 min-h-135 flex-center bord-rad-1 border-1">
             3
           </div>
-          <div class="bg-col-4 min-h-120 flex-center bord-rad-1 border-1">
+          <div class="bg-col-4 min-h-135 flex-center bord-rad-1 border-1">
             4
           </div>
-          <div class="bg-col-5 min-h-120 flex-center bord-rad-1 border-1">
+          <div class="bg-col-5 min-h-135 flex-center bord-rad-1 border-1">
             5
           </div>
-          <div
-            class="bg-col-5 min-h-120 flex-center bord-rad-1 border-1 shadow-3"
-          >
+          <div class="bg-col-5 min-h-135 flex-center bord-rad-1 border-1">
             6
           </div>
         </div>
 
         <!-- button-x -->
-        <div class="fs-3 fw-700 pt-40 pb-10">button-x</div>
+        <div class="class_name_header">button-x</div>
         <button class="button-1">1</button>
 
         <div class="fs-3 fw-700 pt-40 pb-10 flex flex-column">border-x</div>
@@ -84,15 +109,28 @@
         </div>
 
         <!-- shadow-x -->
-        <div class="fs-3 fw-700 pt-40 pb-10 flex flex-column">shadow-x</div>
+        <div class="class_name_header flex flex-column">shadow-x</div>
         <div class="flex flex-row gap-20">
           <div class="w-60 h-60 flex-center shadow-1">1</div>
           <div class="w-60 h-60 flex-center shadow-2">2</div>
           <div class="w-60 h-60 flex-center shadow-3">3</div>
         </div>
 
+        <!-- hr -->
+        <div class="class_name_header">hr-x</div>
+
+        1
+        <hr class="hr-1" />
+        <br />
+
+        2
+        <hr class="hr-2" />
+        <br />
+        3
+        <hr class="hr-3" />
+
         <!-- text-x -->
-        <div class="fs-3 fw-700 pt-40 pb-10">text-x</div>
+        <div class="class_name_header">text-x</div>
         <div class="max-w-600">
           <div class="text-1">
             <div class="fs-6 fw-600 pt-6">text-1</div>
