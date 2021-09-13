@@ -145,13 +145,23 @@
 
 /* transition */
 .transition-1 {
-  transition: all 0.08s ease-in;
+  transition: all 0.12s ease-in;
 }
 .transition-2 {
   transition: all 0.08s ease-in;
 }
 .transition-3 {
   transition: all 0.08s ease-in;
+}
+/* disable transition when you click on stuff, so that there is no delay between the state change */
+.transition-1:active {
+  transition: none;
+}
+.transition-2:active {
+  transition: none;
+}
+.transition-3:active {
+  transition: none;
 }
 
 /* 
@@ -199,23 +209,22 @@
 /* buttons */
 .button-1 {
   min-width: 104px;
-  min-height: 40px;
+  min-height: 42px;
   background: #000000;
-  color: #fffffff1;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 700;
   border-radius: 7px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.09s ease-in;
 }
 .button-1:hover {
   background: #a7a6a6;
 }
 .button-1:active {
-  transition: none; /* disables transition on click */
-  background: #171717;
+  background: #79ae24;
   color: #ffffff;
 }
 

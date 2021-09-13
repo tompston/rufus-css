@@ -51,13 +51,11 @@ first_loop_first_value = 0
 first_loop_last_value = 102
 first_loop_increment = 2
 
-
 second_loop_first_value = 100
 second_loop_last_value = 802
 second_loop_increment = 5
 
 css_unit = "px"
-
 
 # for key, value
 for file_name, key_value in css.items():
@@ -79,14 +77,12 @@ for file_name, key_value in css.items():
             file_object = open(f'./css/{file_name}.css', 'a')
 
             for x in range(first_loop_first_value, first_loop_last_value, first_loop_increment):
-                single_css_class = ".%s-%d{%s : %d%s;}" % (
-                    class_name, x, css_property, x, css_unit)
+                single_css_class = f".{class_name}-{x}{{{css_property}:{x}{css_unit};}}"
                 # at this point, you have access to a single generated css class, so append / save it to thr file
                 file_object.write(single_css_class)
 
             for x in range(second_loop_first_value, second_loop_last_value, second_loop_increment):
-                single_css_class = ".%s-%d{%s : %d%s;}" % (
-                    class_name, x, css_property, x, css_unit)
+                single_css_class = f".{class_name}-{x}{{{css_property}:{x}{css_unit};}}"
                 file_object.write(single_css_class)
 
             file_object.close()
@@ -97,13 +93,11 @@ for file_name, key_value in css.items():
             file_object = open(f'./css/{file_name}.css', 'a')
 
             for x in range(first_loop_first_value, first_loop_last_value, first_loop_increment):
-                single_css_class = ".%s-%d{%s : %d%s; %s : %d%s;}" % (
-                    class_name, x, css_property, x, css_unit, css_property_2, x, css_unit)
+                single_css_class = f".{class_name}-{x}{{{css_property} : {x}{css_unit}; {css_property_2} : {x}{css_unit};}}"
                 file_object.write(single_css_class)
 
             for x in range(second_loop_first_value, second_loop_last_value, second_loop_increment):
-                single_css_class = ".%s-%d{%s : %d%s; %s : %d%s;}" % (
-                    class_name, x, css_property, x, css_unit, css_property_2, x, css_unit)
+                single_css_class = f".{class_name}-{x}{{{css_property} : {x}{css_unit}; {css_property_2} : {x}{css_unit};}}"
                 file_object.write(single_css_class)
 
         else:
