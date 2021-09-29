@@ -7,7 +7,7 @@ import os
 
 css = {
     # file_name
-    # Do NOT choose a file_name that already exists in the ./css directory, if you want to preserve it
+    # !!! Do not choose a file_name that already exists in the ./css directory, if you want to preserve it
     "margin": [
         # [class_name, css_property]
         ['m', 'margin'],
@@ -45,60 +45,51 @@ css = {
     ],
 }
 
-# values for the loop that will generate the auto-incrementing css classes
-# adjusted to personal needs
-first_loop_first_value = 0
-first_loop_last_value = 102
-first_loop_increment = 2
 
-second_loop_first_value = 100
-second_loop_last_value = 802
-second_loop_increment = 5
+class_value_range = [    
+    # values for the loop that will generate the auto-incrementing css classes
+    # start , end, increment
+    [0,     102,    2],
+    [100,   802,    5]
+]
+
 
 css_unit = "px"
 
-# for key, value
 for file_name, key_value in css.items():
-    # on each run, check if the file already exists
-    # if file exist, delete so that the appends would not duplicate
+    # on each run, check if the file (name of the key) already exists
+    # if file exist, delete it so that the appends would not duplicate
     file_path = f'./css/{file_name}.css'
     if os.path.exists(file_path):
         os.remove(file_path)
 
     for array in key_value:
-        # the first value defined in the array is the class name
-        class_name = array[0]
-        # the second value in the array is the css property
-        css_property = array[1]
+        class_name = array[0]   # the first value defined in the array is the class name
+        css_property = array[1] # the second value in the array is the css property
 
         # if two values are provided in the array
         if len(array) == 2:
             # create / open the file that will hold the generated class names
             file_object = open(f'./css/{file_name}.css', 'a')
 
-            for x in range(first_loop_first_value, first_loop_last_value, first_loop_increment):
-                single_css_class = f".{class_name}-{x}{{{css_property}:{x}{css_unit};}}"
-                # at this point, you have access to a single generated css class, so append / save it to thr file
-                file_object.write(single_css_class)
+            # loop over each array in the class_value_range array and use the defined values for the for loop
+            for value_range in class_value_range:
+                for x in range(value_range[0], value_range[1], value_range[2]):
+                    single_css_class = f".{class_name}-{x}{{{css_property}:{x}{css_unit};}}"
+                    # at this point you have access to a single generated css class, so append / save it to the file
+                    file_object.write(single_css_class)
 
-            for x in range(second_loop_first_value, second_loop_last_value, second_loop_increment):
-                single_css_class = f".{class_name}-{x}{{{css_property}:{x}{css_unit};}}"
-                file_object.write(single_css_class)
+            # file_object.close()
 
-            file_object.close()
-
-         # if you provide 3 values / 2 css properties  in the array,
+        # if you provide 3 values / 2 css properties  in the array,
         elif len(array) == 3:
             css_property_2 = array[2]
             file_object = open(f'./css/{file_name}.css', 'a')
 
-            for x in range(first_loop_first_value, first_loop_last_value, first_loop_increment):
-                single_css_class = f".{class_name}-{x}{{{css_property} : {x}{css_unit}; {css_property_2} : {x}{css_unit};}}"
-                file_object.write(single_css_class)
-
-            for x in range(second_loop_first_value, second_loop_last_value, second_loop_increment):
-                single_css_class = f".{class_name}-{x}{{{css_property} : {x}{css_unit}; {css_property_2} : {x}{css_unit};}}"
-                file_object.write(single_css_class)
+            for value_range in class_value_range:
+                for x in range(value_range[0], value_range[1], value_range[2]):
+                    single_css_class = f".{class_name}-{x}{{{css_property} : {x}{css_unit}; {css_property_2} : {x}{css_unit};}}"
+                    file_object.write(single_css_class)
 
         else:
             print("Too many or too little values in the array.")

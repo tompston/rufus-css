@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "concat-css": "cat css/* > style.css"
+    "concat-css": "cat css/* > rufus.css"
   },
   "author": "",
   "license": "ISC"

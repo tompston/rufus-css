@@ -1,10 +1,3 @@
-/* importing fonts example*/
-/* 
-@font-face {
-  font-family: "Poppins-Bold";
-  src: url(../fonts/Poppins-Bold.ttf);
-} 
-*/
 :root {
   /* font-family */
   --font-fam-1: sans-serif;
@@ -30,7 +23,7 @@
   --text-col-5: #ffffff;
   --text-col-6: #ffffff;
 
-  --max-width-1: 935px; /* max-width for the main content*/
+  --max-width-1: 985px; /* max-width for the main content*/
 
   /* font-size, 1rem == 16px, clamp(MIN_VALUE, VALUE, MAX_VAL) */
   --fs-1: clamp(4.5rem, 12vw + 1rem, 5.5rem);
@@ -51,6 +44,14 @@
   --bord-rad-5: 5px;
   --bord-rad-6: 5px;
 }
+
+/* importing fonts example*/
+/* 
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../fonts/Poppins-Bold.ttf);
+} 
+*/
 
 /* Changing predefined html properties */
 html {
