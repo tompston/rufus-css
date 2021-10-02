@@ -8,7 +8,7 @@
 
 ## Goals
 
-1. predictable names for classes that deal with padding, margin, width, height, etc
+1. predictable names (increments) for classes that deal with padding, margin, width, height, etc
    - m-345 means margin: 345px
 2. The name of the root variable is the same as the class name
    - --font-fam-1 variable is font-fam-1 class
