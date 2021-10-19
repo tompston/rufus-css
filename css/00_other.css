@@ -92,26 +92,6 @@
   font-weight: 900;
 }
 
-/* Sizes taken from tw */
-.text-space-1 {
-  letter-spacing: 0.1em;
-}
-.text-space-2 {
-  letter-spacing: 0.05em;
-}
-.text-space-3 {
-  letter-spacing: 0.025em;
-}
-.text-space-4 {
-  letter-spacing: 0em;
-}
-.text-space-5 {
-  letter-spacing: -0.025em;
-}
-.text-space-6 {
-  letter-spacing: -0.05em;
-}
-
 /* z-index */
 .z-10 {
   z-index: 10;
@@ -143,108 +123,43 @@
   text-align: justify;
 }
 
-/* transition */
-.transition-1 {
-  transition: all 0.12s ease-in;
-}
-.transition-2 {
-  transition: all 0.08s ease-in;
-}
-.transition-3 {
-  transition: all 0.08s ease-in;
-}
-/* disable transition when you click on stuff, so that there is no delay between the state change */
-.transition-1:active {
-  transition: none;
-}
-.transition-2:active {
-  transition: none;
-}
-.transition-3:active {
-  transition: none;
-}
-
-/* 
-  shadows taken from here, a lot of examples to choose from
-  https://getcssscan.com/css-box-shadow-examples
-*/
-.shadow-1 {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.shadow-2 {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-.shadow-3 {
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-}
-
-/* hr */
-.hr-1 {
-  border: 0;
-  height: 1px;
-  background: rgba(29, 29, 29, 0.4);
-}
-.hr-2 {
-  border: 0;
-  height: 1px;
-  background: rgba(29, 29, 29, 0.2);
-}
-.hr-3 {
-  border: 0;
-  height: 1px;
-  background: rgba(29, 29, 29, 0.1);
-}
-
-/* border */
-.border-1 {
-  border: 1px solid rgba(48, 48, 48, 0.2);
-}
-.border-2 {
-  border: 2px solid rgba(48, 48, 48, 0.15);
-}
-.border-3 {
-  border: 3px solid rgba(48, 48, 48, 0.08);
-}
-
 /* buttons */
 .button-1 {
+  /* dimensions */
   min-width: 104px;
   min-height: 42px;
-  background: #000000;
-  color: #ffffff;
+  /*  */
   font-size: 14px;
   font-weight: 700;
   border-radius: 7px;
-
+  border: 3px solid rgba(177, 174, 174, 0.3);
+  padding: 12px 12px;
+  /* center text */
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.button-1:hover {
-  background: #a7a6a6;
-}
-.button-1:active {
-  background: #79ae24;
-  color: #ffffff;
+  /* disable text select */
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 
 /* other helper classes */
 .italic {
   font-style: italic;
 }
-
 .underline {
   text-decoration: underline;
 }
-
 .hidden {
   display: none;
 }
-
 .round {
-  border-radius: 50%;
+  border-radius: 999px;
 }
-
 .img-cover {
   -o-object-fit: cover;
   object-fit: cover;
@@ -261,4 +176,13 @@
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   user-select: none;
+}
+
+.align-text-vertically {
+  display: flex;
+  align-items: center;
+}
+
+.remove-decoration {
+  text-decoration: none;
 }

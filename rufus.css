@@ -1,4 +1,7 @@
 :root {
+  /* max-width for the main content*/
+  --max-width-1: 1005px;
+
   /* font-family */
   --font-fam-1: sans-serif;
   --font-fam-2: sans-serif;
@@ -16,20 +19,18 @@
   --bg-col-6: #ffffff;
 
   /* font-color */
-  --text-col-1: #000000;
+  --text-col-1: #161616;
   --text-col-2: #ffffff;
   --text-col-3: #ffffff;
   --text-col-4: #ffffff;
   --text-col-5: #ffffff;
   --text-col-6: #ffffff;
 
-  --max-width-1: 985px; /* max-width for the main content*/
-
   /* font-size, 1rem == 16px, clamp(MIN_VALUE, VALUE, MAX_VAL) */
   --fs-1: clamp(4.5rem, 12vw + 1rem, 5.5rem);
   --fs-2: clamp(3.2rem, 12vw + 1rem, 4rem);
   --fs-3: clamp(2.25rem, 12vw + 1rem, 2.8rem);
-  --fs-4: clamp(1.75rem, 12vw + 1rem, 2rem);
+  --fs-4: 30px;
   --fs-5: 22px;
   --fs-6: 20px;
   --fs-7: 18px;
@@ -43,14 +44,62 @@
   --bord-rad-4: 5px;
   --bord-rad-5: 5px;
   --bord-rad-6: 5px;
+
+  /* hr color  */
+  --hr-col-1: rgba(29, 29, 29, 0.4);
+  --hr-col-2: rgba(29, 29, 29, 0.2);
+  --hr-col-3: rgba(29, 29, 29, 0.1);
+
+  /* border */
+  --border-1: 1px solid rgba(48, 48, 48, 0.2);
+  --border-2: 2px solid rgba(48, 48, 48, 0.15);
+  --border-3: 3px solid rgba(48, 48, 48, 0.08);
+
+  --button-danger-bg: rgb(184, 75, 75);
+  --button-danger-bg-hover: rgb(153, 43, 43);
+  --button-danger-bg-active: rgb(184, 75, 75);
+
+  --button-success-bg: rgb(51, 160, 60);
+  --button-success-bg-hover: rgb(16, 118, 24);
+  --button-success-bg-active: rgb(184, 75, 75);
+
+  /* transition */
+  --transition-1: all 0.12s ease-in;
+  --transition-2: all 0.08s ease-in;
+  --transition-3: all 0.08s ease-in;
+
+  /* shadow */
+  --shadow-1: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --shadow-2: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --shadow-3: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+  /* text-space (letter-spacing property) */
+  --text-space-1: 0.1em;
+  --text-space-2: 0.05em;
+  --text-space-3: 0.025em;
+  --text-space-4: 0em;
+  --text-space-5: -0.025em;
+  --text-space-6: -0.05em;
 }
 
-/* importing fonts example*/
 /* 
-@font-face {
-  font-family: "Poppins-Bold";
-  src: url(../fonts/Poppins-Bold.ttf);
-} 
+--- importing fonts example
+
+  @font-face {
+    font-family: "Poppins-Bold";
+    src: url(../fonts/Poppins-Bold.ttf);
+  } 
+
+--- Centering content + full width backgrounds in html
+
+    <div class="flex-center">
+        <div class="max-width-1">content</div>
+    </div>
+
+--- Automatic grid example
+
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
 */
 
 /* Changing predefined html properties */
@@ -72,7 +121,7 @@ body {
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
-/* Other fonts
+/* Other possible fonts
   font-family: "Helvetica", Arial, sans-serif;
   font-family: Inter, system-ui, sans-serif;
   font-family: Tenor Sans, Georgia, serif;
@@ -354,11 +403,139 @@ a:active {
   line-height: 1.688;
 }
 
+/* transition */
+.transition-1 {
+  transition: var(--transition-1);
+}
+.transition-2 {
+  transition: var(--transition-2);
+}
+.transition-3 {
+  transition: var(--transition-3);
+}
+/* disable transition when you click on stuff, so that there is no delay between the state change */
+.transition-1:active {
+  transition: none;
+}
+.transition-2:active {
+  transition: none;
+}
+.transition-3:active {
+  transition: none;
+}
+
+/* shadows taken from here, a lot of examples to choose from
+https://getcssscan.com/css-box-shadow-examples*/
+.shadow-1 {
+  box-shadow: var(--shadow-1);
+}
+.shadow-2 {
+  box-shadow: var(--shadow-2);
+}
+.shadow-3 {
+  box-shadow: var(--shadow-3);
+}
+
+/* hr with a height of 1px, and decreasing color intensity*/
+.hr-1-1 {
+  border: 0;
+  height: 1px;
+  background: var(--hr-col-1);
+}
+.hr-1-2 {
+  border: 0;
+  height: 1px;
+  background: var(--hr-col-2);
+}
+.hr-1-3 {
+  border: 0;
+  height: 1px;
+  background: var(--hr-col-3);
+}
+/* hr with a height of 2px, and decreasing color intensity*/
+.hr-2-1 {
+  border: 0;
+  height: 2px;
+  background: var(--hr-col-1);
+}
+.hr-2-2 {
+  /* why tf does it look like 1px height with height:2px */
+  border: 0;
+  height: 3px;
+  background: var(--hr-col-2);
+}
+.hr-2-3 {
+  border: 0;
+  height: 2px;
+  background: var(--hr-col-3);
+}
+
+/* Sizes taken from tw */
+.text-space-1 {
+  letter-spacing: var(--text-space-1);
+}
+.text-space-2 {
+  letter-spacing: var(--text-space-2);
+}
+.text-space-3 {
+  letter-spacing: var(--text-space-3);
+}
+.text-space-4 {
+  letter-spacing: var(--text-space-4);
+}
+.text-space-5 {
+  letter-spacing: var(--text-space-5);
+}
+.text-space-6 {
+  letter-spacing: var(--text-space-6);
+}
+
+/* border */
+.border-1 {
+  border: var(--border-1);
+}
+.border-2 {
+  border: var(--border-2);
+}
+.border-3 {
+  border: var(--border-3);
+}
+
+.button-danger {
+  background: var(--button-danger-bg);
+  color: rgba(255, 255, 255, 0.95);
+  border: 3px solid rgba(238, 238, 238, 0.3);
+}
+.button-danger:hover {
+  background: var(--button-danger-bg-hover);
+  border: 3px solid rgba(238, 238, 238, 0.4);
+}
+.button-danger:active {
+  background: rgb(16, 16, 16);
+  color: rgb(255, 255, 255);
+  border: 3px solid rgba(238, 238, 238, 0.5);
+}
+.button-success {
+  background: var(--button-success-bg);
+  color: rgba(255, 255, 255, 0.95);
+  border: 3px solid rgba(238, 238, 238, 0.4);
+}
+.button-success:hover {
+  background: var(--button-success-bg-hover);
+  border: 3px solid rgba(238, 238, 238, 0.4);
+}
+.button-success:active {
+  background: rgb(16, 16, 16);
+  color: rgb(255, 255, 255);
+  border: 3px solid rgba(238, 238, 238, 0.5);
+}
+
 @media screen and (max-width: 1200px) {
   .max-width-1 {
     padding: 0px 40px;
   }
-}/* opacity */
+}
+/* opacity */
 .op-0 {
   opacity: 0%;
 }
@@ -452,26 +629,6 @@ a:active {
   font-weight: 900;
 }
 
-/* Sizes taken from tw */
-.text-space-1 {
-  letter-spacing: 0.1em;
-}
-.text-space-2 {
-  letter-spacing: 0.05em;
-}
-.text-space-3 {
-  letter-spacing: 0.025em;
-}
-.text-space-4 {
-  letter-spacing: 0em;
-}
-.text-space-5 {
-  letter-spacing: -0.025em;
-}
-.text-space-6 {
-  letter-spacing: -0.05em;
-}
-
 /* z-index */
 .z-10 {
   z-index: 10;
@@ -503,108 +660,43 @@ a:active {
   text-align: justify;
 }
 
-/* transition */
-.transition-1 {
-  transition: all 0.12s ease-in;
-}
-.transition-2 {
-  transition: all 0.08s ease-in;
-}
-.transition-3 {
-  transition: all 0.08s ease-in;
-}
-/* disable transition when you click on stuff, so that there is no delay between the state change */
-.transition-1:active {
-  transition: none;
-}
-.transition-2:active {
-  transition: none;
-}
-.transition-3:active {
-  transition: none;
-}
-
-/* 
-  shadows taken from here, a lot of examples to choose from
-  https://getcssscan.com/css-box-shadow-examples
-*/
-.shadow-1 {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.shadow-2 {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-.shadow-3 {
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-}
-
-/* hr */
-.hr-1 {
-  border: 0;
-  height: 1px;
-  background: rgba(29, 29, 29, 0.4);
-}
-.hr-2 {
-  border: 0;
-  height: 1px;
-  background: rgba(29, 29, 29, 0.2);
-}
-.hr-3 {
-  border: 0;
-  height: 1px;
-  background: rgba(29, 29, 29, 0.1);
-}
-
-/* border */
-.border-1 {
-  border: 1px solid rgba(48, 48, 48, 0.2);
-}
-.border-2 {
-  border: 2px solid rgba(48, 48, 48, 0.15);
-}
-.border-3 {
-  border: 3px solid rgba(48, 48, 48, 0.08);
-}
-
 /* buttons */
 .button-1 {
+  /* dimensions */
   min-width: 104px;
   min-height: 42px;
-  background: #000000;
-  color: #ffffff;
+  /*  */
   font-size: 14px;
   font-weight: 700;
   border-radius: 7px;
-
+  border: 3px solid rgba(177, 174, 174, 0.3);
+  padding: 12px 12px;
+  /* center text */
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.button-1:hover {
-  background: #a7a6a6;
-}
-.button-1:active {
-  background: #79ae24;
-  color: #ffffff;
+  /* disable text select */
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 
 /* other helper classes */
 .italic {
   font-style: italic;
 }
-
 .underline {
   text-decoration: underline;
 }
-
 .hidden {
   display: none;
 }
-
 .round {
-  border-radius: 50%;
+  border-radius: 999px;
 }
-
 .img-cover {
   -o-object-fit: cover;
   object-fit: cover;
@@ -621,6 +713,15 @@ a:active {
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   user-select: none;
+}
+
+.align-text-vertically {
+  display: flex;
+  align-items: center;
+}
+
+.remove-decoration {
+  text-decoration: none;
 }
 /* rows */
 .gtr-1-1-1-1 {
