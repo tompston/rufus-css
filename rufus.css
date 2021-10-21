@@ -145,6 +145,17 @@ pre {
   margin: 0;
 }
 
+/* disable selection for images & buttons */
+button,
+img {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
 ul {
   list-style: none;
 }
@@ -675,13 +686,6 @@ https://getcssscan.com/css-box-shadow-examples*/
   display: flex;
   align-items: center;
   justify-content: center;
-  /* disable text select */
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  user-select: none;
 }
 
 /* other helper classes */
