@@ -112,10 +112,11 @@ You don't really need a seperate config file for postcss to purge unused
 classes for small SPA projects. Just copy the following into your package.json file
 
 ```json
-"scripts": {
-...
-"postbuild": "purgecss --css dist/assets/_.css --content dist/assets/_.js -o dist/assets/ --safelist html body"
-},
+  "scripts": {
+    ...
+    "postbuild": "purgecss --css dist/assets/*.css --content dist/assets/*.js -o dist/assets/  --safelist html body"
+  },
+
 ```
 
 If this is added, every time you run `npm run build`, the postbuild script will
