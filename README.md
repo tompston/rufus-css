@@ -103,5 +103,24 @@ I like the concept of tailwind, but don't like using rem units.
 
 ## Command to generate and combine css
 
-    # from the root dir, using shell
+    # from the root dir, using bash
     python generate_css_class.py && npm run concat-css
+
+## Purging CSS for Single Page Apps
+
+You don't really need a seperate config file for postcss to purge unused
+classes for small SPA projects. Just copy the following into your package.json file
+
+```json
+"scripts": {
+...
+"postbuild": "purgecss --css dist/assets/_.css --content dist/assets/_.js -o dist/assets/ --safelist html body"
+},
+```
+
+If this is added, every time you run `npm run build`, the postbuild script will
+also be triggered and purge the css in the dist folder.
+
+- note that you need to install purgecss as a dependency, if you're gonna do
+  automatic builds for Netlify and stuff
+- The `package.json` example is also written inside the output file, so u don't need to check the repo again.
