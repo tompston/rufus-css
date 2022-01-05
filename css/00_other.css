@@ -123,23 +123,6 @@
   text-align: justify;
 }
 
-/* buttons */
-.button-1 {
-  /* dimensions */
-  min-width: 104px;
-  min-height: 42px;
-  /*  */
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 7px;
-  border: 2px solid rgba(177, 174, 174, 0.3);
-  padding: 12px 15px;
-  /* center text */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* other helper classes */
 .italic {
   font-style: italic;

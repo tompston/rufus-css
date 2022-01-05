@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Preview</title>
+    <title>Rufus CSS</title>
     <style type="text/css">
       @import url(./css/00_main.css);
       @import url(./css/01_grid.css);
@@ -15,20 +15,138 @@
       @import url(./css/padding.css);
       @import url(./css/width.css);
 
+      :root {
+        --example-box-height: 80px;
+        --table-px: 21px;
+      }
+
+      /* Add the custom marker in the default state. */
+
+      .top_content,
+      table {
+        font-size: var(--fs-9);
+      }
+
+      details[open] {
+        padding-bottom: 12px;
+      }
+
+      details {
+        transition: var(--transition-1);
+      }
+      details:hover {
+
+        box-shadow: var(--shadow-2);
+      }
+
+      table {
+        /* font-family: arial, sans-serif; */
+        width: 100%;
+        border-radius: var(--border-rad-3);
+        overflow: hidden;
+        margin-bottom: 40px;
+        text-align: left;
+        box-shadow: var(--shadow-2);
+        border-collapse: collapse;
+      }
+
+      th {
+        background: rgb(36, 36, 36);
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        padding: 8px var(--table-px);
+        font-size: var(--fs-8);
+        /* font-weight: 600; */
+        
+        
+      }
+      td {
+        padding: 4px var(--table-px);
+        font-family: Roboto Mono, Menlo, monospace;
+        color: rgb(43, 43, 43);
+      }
+      tr:nth-child(even) {
+        background-color: #f7f7f7;
+      }
+      tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
+
       .color_grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
       }
 
+      .box_divide,
+      .color_grid {
+        margin-bottom: 65px;
+      }
+
+      .color_grid,
+      .label_grid,
+      .label_text {
+        font-family: Roboto Mono, Menlo, monospace;
+        font-size: var(--fs-8);
+      }
+
+      h3,
+      h2,
       .class_name_header {
-        font-size: 44px;
-        font-weight: 700;
-        /* margin-top: 94px; */
-        margin-bottom: 16px;
-        /* background: rgb(255, 237, 217); */
+        font-size: var(--fs-4);
+        margin-bottom: 8px;
+        font-weight: 500;
       }
 
-      .box_divide {
-        margin-bottom: 94px;
+      h3 {
+        font-size: var(--fs-5);
+        margin-bottom: 0px;
+      }
+
+      .class_hr_grid {
+        display: grid;
+        gap: 20px;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      .bg_color_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--border-rad-4);
+        min-height: var(--example-box-height);
+      }
+
+      .border_rad_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: var(--example-box-height);
+      }
+
+      .bg_color_box,
+      .border_rad_box {
+        padding: 0px 8px;
+      }
+
+      .label_example_grid {
+        display: grid;
+        grid-template-columns: 160px auto;
+      }
+
+      .class_grid_ {
+        display: grid;
+        gap: 40px;
+      }
+
+      @media screen and (max-width: 800px) {
+        .label_example_grid {
+          grid-template-rows: auto auto;
+          grid-template-columns: auto;
+        }
+      }
+
+      .info_mini_header {
+        font-size: var(--fs-6);
       }
     </style>
   </head>
@@ -36,214 +154,701 @@
     <div class="flex-center font-fam-1">
       <div class="max-width-1 mb-94">
         <!--  -->
-        <div class="fs-1 mt-96 mb-58">Rufus CSS</div>
+        <div class="mt-96 mb-58 top_content">
+          <div class="fs-1 text-center">Rufus CSS</div>
+          <div class="text-center header-5">
+            Self-defined, utility-first, Tailwind-inspired CSS library.
+          </div>
 
-        <!-- font-size -->
-        <div class="class_name_header mt-10">fs-x</div>
-        <div class="box_divide">
-          <div class="fs-1">fs-1</div>
-          <div class="fs-2">fs-2</div>
-          <div class="fs-3">fs-3</div>
-          <div class="fs-4">fs-4</div>
-          <div class="fs-5">fs-5</div>
-          <div class="fs-6">fs-6</div>
-          <div class="fs-7">fs-7</div>
-          <div class="fs-8">fs-8</div>
-          <div class="fs-9">fs-9</div>
+          <div class="text-2 mt-30">
+            <h2 id="why-">Why?</h2>
+            <p>
+              I like the concept of tailwind, but don&#39;t like using rem
+              units. + wanted something that you can tweak easier.
+            </p>
+
+            <details class="my-20 shadow-6 px-30 border-rad-3">
+              <summary class="disable-text-select class_name_header- header-6 py-10">
+                Goals
+              </summary>
+
+              <ol class="text-3">
+                <li>
+                  Root variables are meant to be tweaked for personal / project
+                  needs
+                </li>
+                <li>
+                  <p>
+                    The name of the root variable is the same as the class name
+                  </p>
+                  <ul>
+                    <li>--font-fam-1 variable is font-fam-1 class</li>
+                  </ul>
+                </li>
+                <li>
+                  <p>Collection of 2 types of classes</p>
+                  <ul>
+                    <li>
+                      predefined classes for css properties that change based on
+                      the project ( like
+                      <code
+                        >font-family, font-size, bacground-color, color,
+                        shadow</code
+                      >
+                      )
+                    </li>
+                    <li>
+                      classes generated by python that are used for sizing (
+                      like
+                      <code>padding, marging, height, width, gap</code> )
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    predictable names ( increments ) for classes that deal with
+                    sizing
+                  </p>
+                  <ul>
+                    <li>pl-2 means <code>padding-left:2px;</code></li>
+                    <li>m-345 means <code>margin: 345px;</code></li>
+                  </ul>
+                </li>
+                <li>
+                  Setup is easy, as everything is contained in a single css file
+                  <ul>
+                    <li>
+                      Minimal setup applies only if you don&#39;t need new css
+                      properties / values / ranges / increments for the classes
+                      generated by python
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    Encourages a more maintainable design system, as the root
+                    variables can hold the values that will be used in the
+                    project
+                  </p>
+                  <ul>
+                    <li>
+                      Instead of defining a new color when creating a class for
+                      an element, just use the <code>bg-col-1</code> root
+                      variable. As the value of it is mapped to the class, you
+                      can define it inside the html, or call it from the css
+                      file Same applies to transitions, font-sizes, font-family
+                      shadows , etc etc.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    Remove some of the predefined html css properties for
+                    browsers.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    The goal is not to stop writing css. The goal is to write
+                    css when you need
+                  </p>
+                  <ul>
+                    <li>to specify things that are used relativley rarely</li>
+                    <li>media queries</li>
+                    <li>classes that apply to a group of elements</li>
+                  </ul>
+                </li>
+              </ol>
+            </details>
+
+            <h2 id="classes-not-dependent-on-root-variables">
+              Classes not dependent on root variables
+            </h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>CLASS_NAME</th>
+                  <th>CSS_PROPERTY</th>
+                  <th>NOTES</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>flex-center</td>
+                  <td></td>
+                  <td>center the content</td>
+                </tr>
+                <tr>
+                  <td>grid-center</td>
+                  <td></td>
+                  <td>center the content</td>
+                </tr>
+                <tr>
+                  <td>grid</td>
+                  <td>display: grid</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>gtr-1-1</td>
+                  <td>grid-template-columns:</td>
+                  <td>1fr widths (max 4) or auto (max 3)</td>
+                </tr>
+                <tr>
+                  <td>gtc-1-1</td>
+                  <td>grid-template-rows:</td>
+                  <td>1fr widths (max 4) or auto (max 3)</td>
+                </tr>
+                <tr>
+                  <td>flex</td>
+                  <td>display: flex;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>flex-wrap</td>
+                  <td>flex-wrap: wrap;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>flex-nowrap</td>
+                  <td>flex-wrap: nowrap;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>flex-row</td>
+                  <td>flex-direction: row;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>flex-column</td>
+                  <td>flex-direction: column;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>fw-500</td>
+                  <td>font-weight:500;</td>
+                  <td>100-900</td>
+                </tr>
+                <tr>
+                  <td>text-SIDE</td>
+                  <td>text-align: SIDE;</td>
+                  <td>where SIDE can be: left, right, justify, center</td>
+                </tr>
+                <tr>
+                  <td>op-15</td>
+                  <td>opacity: 0.15;</td>
+                  <td>0-100, increment by 5</td>
+                </tr>
+                <tr>
+                  <td>img-cover</td>
+                  <td>object-fit: cover;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>round</td>
+                  <td>border-radius: 999px;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>italic</td>
+                  <td>font-style: italic;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>underline</td>
+                  <td>text-decoration: underline;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>hidden</td>
+                  <td>display: none;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>pointer</td>
+                  <td>cursor:pointer;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>disable-text-select</td>
+                  <td></td>
+                  <td>don&#39;t allow text selection</td>
+                </tr>
+                <tr>
+                  <td>height-100</td>
+                  <td>height: 100%;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>width-100</td>
+                  <td>width: 100%;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>both-100</td>
+                  <td>height: 100%; width: 100%;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>z-10</td>
+                  <td>z-index</td>
+                  <td>z-10, z-20, z-30, z-40 ,z-50</td>
+                </tr>
+                <tr>
+                  <td>temp-bg-col-1</td>
+                  <td></td>
+                  <td>
+                    used when you don&#39;t have any colors defined for the root
+                    variables. (1-6)
+                  </td>
+                </tr>
+                <tr>
+                  <td>remove-decoration</td>
+                  <td>text-decoration: none;</td>
+                  <td>remove text decorations</td>
+                </tr>
+                <tr>
+                  <td>align-text-vertically</td>
+                  <td>display: flex; align-items: center;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2 id="classes-generated-from-python-script">
+              Classes generated from python script
+            </h2>
+            <h3 id="current-setup-">Current setup:</h3>
+            <ul>
+              <li>0-100, increment by 2px</li>
+              <li>100-500, increment by 5px</li>
+            </ul>
+            <table>
+              <thead>
+                <tr>
+                  <th>CLASS_NAME</th>
+                  <th>CSS_PROPERTY</th>
+                  <th>NOTES</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>gap-0</td>
+                  <td>gap</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>gap-h-0</td>
+                  <td>row-gap</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>gap-w-0</td>
+                  <td>column-gap</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>h-0</td>
+                  <td>height</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>max-h-0</td>
+                  <td>max-height</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>min-h-0</td>
+                  <td>min-height</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>same applies to width, just change h -&gt; w</td>
+                </tr>
+                <tr>
+                  <td>m-0</td>
+                  <td>margin</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>mr-0</td>
+                  <td>margin-right</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>ml-0</td>
+                  <td>margin-left</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>mt-0</td>
+                  <td>margin-top</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>mb-0</td>
+                  <td>margin-bottom</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>same applies to padding, just change m -&gt; p</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2 id="classes-dependent-on-root-variables">
+              Classes Dependent on root variables
+            </h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>CLASS_NAME</th>
+                  <th>CSS_PROPERTY</th>
+                  <th>NOTES</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>font-fam-1</td>
+                  <td>font-family</td>
+                  <td>1-6</td>
+                </tr>
+                <tr>
+                  <td>bg-col-1</td>
+                  <td>background-color</td>
+                  <td>1-6</td>
+                </tr>
+                <tr>
+                  <td>text-col-1</td>
+                  <td>color</td>
+                  <td>1-6</td>
+                </tr>
+                <tr>
+                  <td>fs-1</td>
+                  <td>font-size</td>
+                  <td>1-9</td>
+                </tr>
+                <tr>
+                  <td>border-x-x</td>
+                  <td>border</td>
+                  <td>border-HEIGHT-COLOR (1-3, 1-3)</td>
+                </tr>
+                <tr>
+                  <td>border-rad-1</td>
+                  <td>border-radius</td>
+                  <td>1-6</td>
+                </tr>
+                <tr>
+                  <td>header-1</td>
+                  <td>font-size &amp; line-height</td>
+                  <td>1-6, font-size dependent on root varaible</td>
+                </tr>
+                <tr>
+                  <td>text-1</td>
+                  <td>font-size &amp; line-height</td>
+                  <td>1-4, font-size dependent on root varaible</td>
+                </tr>
+                <tr>
+                  <td>hr-x-x</td>
+                  <td>border, height, background</td>
+                  <td>hr-HEIGHT-COLOR (1-3, 1-3)</td>
+                </tr>
+                <tr>
+                  <td>transition-1</td>
+                  <td>transition:</td>
+                  <td>
+                    1-3, used as a helper class so that you can attach them to
+                    existing elements
+                  </td>
+                </tr>
+                <tr>
+                  <td>letter-spacing-1</td>
+                  <td>letter-spacing</td>
+                  <td>1-6</td>
+                </tr>
+                <tr>
+                  <td>shadow-1</td>
+                  <td>box-shadow:</td>
+                  <td>1-6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <div></div>
+        <div class="header-4 mb-14">Preview for some of the root variable predefined classes</div>
+        <!-- header-x -->
+        <div class="class_name_header">fs-x</div>
+        <div class="box_divide grid gap-50">
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">fs-1</div>
+            <div class="fs-1 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">fs-2</div>
+            <div class="fs-2 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">fs-3</div>
+            <div class="fs-3 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">fs-4</div>
+            <div class="fs-4 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">fs-5</div>
+            <div class="fs-5 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+
+          <div class="label_example_grid">
+            <div class="label_grid label_text">fs-6</div>
+            <div class="fs-6 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+
+          <div class="label_example_grid">
+            <div class="label_grid label_text">fs-7</div>
+            <div class="fs-7 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+          <div class="label_example_grid">
+            <div class="label_grid label_text">fs-8</div>
+            <div class="fs-8 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+          <div class="label_example_grid">
+            <div class="label_grid label_text">fs-9</div>
+            <div class="fs-9 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
         </div>
 
         <!-- temp-bg-col- -->
         <div class="class_name_header">temp-bg-col-x</div>
-        <div class="grid color_grid gap-10 text-col-1 text-1 box_divide">
-          <div
-            class="temp-bg-col-1 min-h-135 flex-center border-rad-1 text-col-2"
-          >
-            1
-          </div>
-          <div
-            class="temp-bg-col-2 min-h-135 flex-center border-rad-1 text-col-2"
-          >
-            2
-          </div>
-          <div
-            class="temp-bg-col-3 min-h-135 flex-center border-rad-1 text-col-2"
-          >
-            3
-          </div>
-          <div class="temp-bg-col-4 min-h-135 flex-center border-rad-1">4</div>
-          <div class="temp-bg-col-5 min-h-135 flex-center border-rad-1">5</div>
-          <div class="temp-bg-col-6 min-h-135 flex-center border-rad-1">6</div>
+        <div class="grid color_grid gap-10">
+          <div class="temp-bg-col-1 bg_color_box text-col-2">temp-bg-col-1</div>
+          <div class="temp-bg-col-2 bg_color_box text-col-2">temp-bg-col-2</div>
+          <div class="temp-bg-col-3 bg_color_box text-col-2">temp-bg-col-3</div>
+          <div class="temp-bg-col-4 bg_color_box">temp-bg-col-4</div>
+          <div class="temp-bg-col-5 bg_color_box">temp-bg-col-5</div>
+          <div class="temp-bg-col-6 bg_color_box">temp-bg-col-6</div>
         </div>
 
         <!-- temp-bg-col- -->
         <div class="class_name_header">bg-col-x</div>
-        <div class="grid color_grid gap-10 text-col-1 text-1 box_divide">
-          <div
-            class="
-              bg-col-1
-              min-h-135
-              flex-center
-              border-rad-1 border-1
-              text-col-2
-            "
-          >
-            1
-          </div>
-          <div class="bg-col-2 min-h-135 flex-center border-rad-1 border-1">
-            2
-          </div>
-          <div class="bg-col-3 min-h-135 flex-center border-rad-1 border-1">
-            3
-          </div>
-          <div class="bg-col-4 min-h-135 flex-center border-rad-1 border-1">
-            4
-          </div>
-          <div class="bg-col-5 min-h-135 flex-center border-rad-1 border-1">
-            5
-          </div>
-          <div class="bg-col-5 min-h-135 flex-center border-rad-1 border-1">
-            6
-          </div>
-        </div>
-
-        <!-- button-x -->
-        <div class="class_name_header">button-x</div>
-
-        <div class="box_divide">
-          <button class="button-1 transition-1">1</button>
-        </div>
-
-        <!-- button-custom -->
-        <div class="class_name_header">button-custom</div>
-
-        <div class="box_divide">
-          <button class="button-1 transition-1 button-danger mb-10">
-            button-danger
-          </button>
-          <button class="button-1 transition-1 button-success">
-            button-success
-          </button>
-        </div>
-
-        <div class="class_name_header flex flex-column gap-10">border-x-x</div>
-        <div class="flex flex-row gap-30 mb-10">
-          <div class="w-60 h-60 border-1-1 flex-center">1-1</div>
-          <div class="w-60 h-60 border-1-2 flex-center">1-2</div>
-          <div class="w-60 h-60 border-1-3 flex-center">1-3</div>
-        </div>
-        <div class="flex flex-row gap-30 mb-10">
-          <div class="w-60 h-60 border-2-1 flex-center">2-1</div>
-          <div class="w-60 h-60 border-2-2 flex-center">2-2</div>
-          <div class="w-60 h-60 border-2-3 flex-center">2-3</div>
-        </div>
-        <div class="flex flex-row gap-30 box_divide">
-          <div class="w-60 h-60 border-3-1 flex-center">3-1</div>
-          <div class="w-60 h-60 border-3-2 flex-center">3-2</div>
-          <div class="w-60 h-60 border-3-3 flex-center">3-3</div>
+        <div class="grid color_grid gap-10">
+          <div class="bg-col-1 bg_color_box text-col-2">bg-col-1</div>
+          <div class="bg-col-2 bg_color_box border-1-2">bg-col-2</div>
+          <div class="bg-col-3 bg_color_box border-1-2">bg-col-3</div>
+          <div class="bg-col-4 bg_color_box border-1-2">bg-col-4</div>
+          <div class="bg-col-5 bg_color_box border-1-2">bg-col-5</div>
+          <div class="bg-col-5 bg_color_box border-1-2">bg-col-6</div>
         </div>
 
         <!-- shadow-x -->
-        <div class="class_name_header flex flex-column">shadow-x</div>
-        <div class="flex flex-row gap-20 box_divide">
-          <div class="w-60 h-60 flex-center shadow-1">1</div>
-          <div class="w-60 h-60 flex-center shadow-2">2</div>
-          <div class="w-60 h-60 flex-center shadow-3">3</div>
+        <div class="class_name_header">shadow-x</div>
+        <div class="grid color_grid gap-10">
+          <div class="bg_color_box shadow-1">shadow-1</div>
+          <div class="bg_color_box shadow-2">shadow-2</div>
+          <div class="bg_color_box shadow-3">shadow-3</div>
+          <div class="bg_color_box shadow-4">shadow-4</div>
+          <div class="bg_color_box shadow-5">shadow-5</div>
+          <div class="bg_color_box shadow-6">shadow-6</div>
         </div>
 
-        <!-- hr -->
-        <div class="class_name_header">hr-x</div>
-
-        <div class="box_divide">
-          hr-1-1
-          <hr class="hr-1-1" />
-          <br />
-
-          hr-1-2
-          <hr class="hr-1-2" />
-          <br />
-          hr-1-3
-          <hr class="hr-1-3" />
-          <br />
-          hr-2-1
-          <hr class="hr-2-1" />
-          <br />
-          hr-2-2
-          <hr class="hr-2-2" />
-          <br />
-          hr-2-3
-          <hr class="hr-2-3" />
+        <!-- border-rad-x -->
+        <div class="class_name_header">border-rad-x</div>
+        <div class="grid color_grid gap-10">
+          <div class="border_rad_box border-1-2 border-rad-1">border-rad-1</div>
+          <div class="border_rad_box border-1-2 border-rad-2">border-rad-2</div>
+          <div class="border_rad_box border-1-2 border-rad-3">border-rad-3</div>
+          <div class="border_rad_box border-1-2 border-rad-4">border-rad-4</div>
+          <div class="border_rad_box border-1-2 border-rad-5">border-rad-5</div>
+          <div class="border_rad_box border-1-2 border-rad-6">border-rad-6</div>
         </div>
 
-        <!-- text-x -->
-        <div class="class_name_header">text-x</div>
-        <div class="max-w-600 box_divide">
-          <div class="text-1">
-            <div class="fs-6 fw-600 pt-6">text-1</div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
-            esse facere ipsam ratione
-          </div>
-          <div class="text-2">
-            <div class="fs-6 fw-600 pt-6">text-2</div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
-            esse facere ipsam ratione
-          </div>
-          <div class="fs-6 fw-600 pt-6">text-3</div>
-          <div class="text-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
-            esse facere ipsam ratione
-          </div>
-          <div class="fs-6 fw-600 pt-6">text-4</div>
-          <div class="text-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
-            esse facere ipsam ratione
-          </div>
+        <!-- border-rad-x -->
+        <div class="class_name_header">border-x-x</div>
+        <div class="grid color_grid gap-10">
+          <div class="bg_color_box border-1 border-1-1">border-1-1</div>
+          <div class="bg_color_box border-1 border-1-2">border-1-2</div>
+          <div class="bg_color_box border-1 border-1-3">border-1-3</div>
+          <div class="bg_color_box border-1 border-2-1">border-1-1</div>
+          <div class="bg_color_box border-1 border-2-2">border-1-2</div>
+          <div class="bg_color_box border-1 border-2-3">border-1-3</div>
+          <div class="bg_color_box border-1 border-3-1">border-3-1</div>
+          <div class="bg_color_box border-1 border-3-2">border-3-2</div>
+          <div class="bg_color_box border-1 border-3-3">border-3-3</div>
         </div>
 
         <!-- transition-x -->
         <div class="class_name_header">transition-x</div>
-        <div class="box_divide flex gap-20">
-          <button
-            class="
-              w-125
-              h-50
-              border-1
-              flex-center
-              element_that_uses_transition
-              transition-1
-            "
+        <div class="grid color_grid gap-10">
+          <div
+            class="bg_color_box border-1-2 element_that_uses_transition transition-1"
           >
             transition-1
-          </button>
-
-          <button
-            class="
-              w-125
-              h-50
-              border-1
-              flex-center
-              element_that_uses_transition
-              transition-2
-            "
+          </div>
+          <div
+            class="bg_color_box border-1-2 element_that_uses_transition transition-2"
           >
             transition-2
-          </button>
-
-          <button
-            class="
-              w-125
-              h-50
-              border-1
-              flex-center
-              element_that_uses_transition
-              transition-3
-            "
+          </div>
+          <div
+            class="bg_color_box border-1-2 element_that_uses_transition transition-3"
           >
             transition-3
-          </button>
+          </div>
+        </div>
+
+        <!-- shadow-x -->
+        <div class="class_name_header">hr-x-x</div>
+        <div class="grid color_grid gap-10 mb-30">
+          <div class="class_hr_grid">
+            <div>hr-1-1</div>
+            <hr class="hr-1-1" />
+          </div>
+          <div class="class_hr_grid">
+            <div>hr-1-2</div>
+            <hr class="hr-1-2" />
+          </div>
+          <div class="class_hr_grid">
+            <div>hr-1-3</div>
+            <hr class="hr-1-3" />
+          </div>
+          <div class="class_hr_grid">
+            <div>hr-2-1</div>
+            <hr class="hr-2-1" />
+          </div>
+          <div class="class_hr_grid">
+            <div>hr-2-2</div>
+            <hr class="hr-2-2" />
+          </div>
+          <div class="class_hr_grid">
+            <div>hr-2-3</div>
+            <hr class="hr-2-3" />
+          </div>
+        </div>
+
+        <!-- button-x -->
+        <!-- <div class="class_name_header">button-x</div>
+        <div class="box_divide flex gap-20">
+          <button class="button button-1 transition-1">button-1</button>
+        </div> -->
+
+        <!-- header-x -->
+        <div class="class_name_header">header-x</div>
+        <div class="box_divide class_grid_">
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text label_text">header-1</div>
+            <div class="header-1 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">header-2</div>
+            <div class="header-2 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">header-3</div>
+            <div class="header-3 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">header-4</div>
+            <div class="header-4 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">header-5</div>
+            <div class="header-5 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+
+          <div class="label_example_grid">
+            <div class="label_grid label_text">header-6</div>
+            <div class="header-6 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+        </div>
+
+        <!-- header-x -->
+        <div class="class_name_header">text-x</div>
+        <div class="box_divide grid gap-50">
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">text-1</div>
+            <div class="text-1 example_grid">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
+              esse facere ipsam ratione
+            </div>
+          </div>
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">text-2</div>
+            <div class="text-2 example_grid">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
+              esse facere ipsam ratione
+            </div>
+          </div>
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">text-3</div>
+            <div class="text-3 example_grid">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
+              esse facere ipsam ratione
+            </div>
+          </div>
+          <!--  -->
+          <div class="label_example_grid">
+            <div class="label_grid label_text">text-4</div>
+            <div class="text-4 example_grid">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
+              esse facere ipsam ratione
+            </div>
+          </div>
         </div>
       </div>
     </div>
