@@ -2,9 +2,21 @@
 
 Self-defined, utility-first, Tailwind-inspired CSS library.
 
+### [Link to docs](https://tompston.github.io/rufus-css/)
+
 ## Why?
 
 I like the concept of tailwind, but don't like using rem units. + I wanted something that you can tweak easier.
+
+## Download
+
+```bash
+# with cmd
+curl https://raw.githubusercontent.com/tompston/rufus-css/main/rufus.css -O rufus.css
+
+# with bash
+wget https://raw.githubusercontent.com/tompston/rufus-css/main/rufus.css
+```
 
 ## Goals
 
@@ -64,9 +76,8 @@ I like the concept of tailwind, but don't like using rem units. + I wanted somet
 | both-100              | height: 100%; width: 100%;          |                                                                           |
 | z-10                  | z-index                             | z-10, z-20, z-30, z-40 ,z-50                                              |
 | temp-bg-col-1         |                                     | used when you don't have any colors defined for the root variables. (1-6) |
-| remove-decoration     | text-decoration: none;              | remove text decorations                                                  |
+| remove-decoration     | text-decoration: none;              | remove text decorations                                                   |
 | align-text-vertically | display: flex; align-items: center; |                                                                           |
-|                       |                                     |                                                                           |
 
 ## Classes generated from python script
 
@@ -138,3 +149,5 @@ also be triggered and purge the css in the dist folder.
 - note that you need to install purgecss as a dependency, if you're gonna do
   automatic builds for Netlify and stuff
 - The `package.json` example is also written inside the output file, so u don't need to check the repo again.
+
+<!-- https://markdowntohtml.com/ -->

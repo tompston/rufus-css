@@ -184,16 +184,17 @@ pre {
   margin: 0;
 }
 
-ul, ol {
+ul,
+ol {
   /* list-style: none; */
   margin: 0px;
   padding-left: 33px;
 }
 
-ol li {
+/*  */
+ol > li {
   margin-bottom: 14px;
 }
-
 
 button {
   outline: inherit;
