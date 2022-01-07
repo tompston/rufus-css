@@ -20,33 +20,31 @@
         --table-px: 21px;
       }
 
-      /* Add the custom marker in the default state. */
+      ul li {
+        padding: 9px 0px;
+        padding-top: 14px;
+      }
 
       table {
         font-size: var(--fs-9);
         margin-top: 5px;
-        /*  */
         overflow-y: hidden;
       }
       .top_content {
         margin-top: 80px;
       }
-
       .md-tables {
         margin-top: 50px;
       }
-
       details[open] {
         padding-bottom: 12px;
       }
-
       details {
         transition: var(--transition-1);
       }
       details:hover {
         box-shadow: var(--shadow-2);
       }
-
       table {
         /* font-family: arial, sans-serif; */
         width: 100%;
@@ -60,16 +58,19 @@
 
       th {
         background: rgb(36, 36, 36);
+        background: rgb(17, 17, 17);
         color: rgb(255, 255, 255);
         font-weight: 500;
-        padding: 8px var(--table-px);
-        font-size: var(--fs-8);
+        font-family: Roboto Mono, Menlo, monospace;
+        padding: 12px var(--table-px);
+        font-size: var(--fs-9);
         /* font-weight: 600; */
       }
       td {
-        padding: 7px var(--table-px);
+        padding: 8px var(--table-px);
         font-family: Roboto Mono, Menlo, monospace;
-        color: rgb(43, 43, 43);
+        /* color: rgb(43, 43, 43); */
+        color: rgb(26, 26, 26);
       }
       tr:nth-child(even) {
         background-color: #f7f7f7;
@@ -78,10 +79,15 @@
         background-color: #ffffff;
       }
       .code_box {
-        background-color: #f5f5f5;
+        background-color: #f5f5f5c0;
         font-family: Consolas;
+        padding: 17px;
+        line-height: 1.3;
+        border-radius: var(--border-rad-3);
       }
-
+      .code_comment {
+        opacity: 0.4;
+      }
       .color_grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
@@ -89,7 +95,7 @@
 
       .box_divide,
       .color_grid {
-        margin-bottom: 75px;
+        margin-bottom: 85px;
       }
 
       .color_grid,
@@ -102,9 +108,11 @@
       h3,
       h2,
       .class_name_header {
+        /* font-family: Roboto Mono, Menlo, monospace; */
         font-size: var(--fs-4);
-        margin-bottom: 8px;
+        margin-bottom: 3px;
         font-weight: 500;
+        font-weight: 600;
       }
 
       h2 {
@@ -193,10 +201,11 @@
             </p>
 
             <div class="mt-30">
-              <div class="header-4">
-                Download
-                <div class="fs-8 p-10 border-rad-4 code_box">
-                  <div class=""># with cmd</div>
+              <div class="header-4-">
+                <div class="class_name_header">Download</div>
+
+                <div class="fs-8 code_box">
+                  <div class="code_comment"># with cmd</div>
                   <div class="">
                     curl
                     https://raw.githubusercontent.com/tompston/rufus-css/main/rufus.css
@@ -204,14 +213,14 @@
                   </div>
 
                   <br />
-                  <div class=""># with bash</div>
+                  <div class="code_comment"># with bash</div>
                   <div class="">
                     wget
                     https://raw.githubusercontent.com/tompston/rufus-css/main/rufus.css
                   </div>
 
                   <br />
-                  <div class=""># or just clone</div>
+                  <div class="code_comment"># or just clone</div>
                   <div class="">
                     git clone https://github.com/tompston/rufus-css.git
                   </div>
@@ -221,17 +230,15 @@
             </div>
 
             <details class="my-20 shadow-6 px-30 border-rad-3">
-              <summary
-                class="disable-text-select class_name_header- header-6 py-10"
-              >
-                Goals
+              <summary class="disable-text-select header-6 py-10">
+                <span class="ml-6">Goals</span>
               </summary>
 
               <!-- Goals  -->
               <!-- Goals  -->
               <!-- Goals  -->
               <!-- Goals  -->
-              <ol class="text-3">
+              <ol class="text-2">
                 <li>
                   Root variables are meant to be tweaked for personal / project
                   needs
@@ -323,334 +330,13 @@
               <!-- Goals  -->
               <!-- Goals  -->
             </details>
-
-            <!-- md-tables -->
-            <!-- md-tables -->
-            <!-- md-tables -->
-            <div class="md-tables">
-              <h2 id="classes-not-dependent-on-root-variables">
-                Classes not dependent on root variables
-              </h2>
-              <table>
-                <thead>
-                  <tr>
-                    <th>CLASS_NAME</th>
-                    <th>CSS_PROPERTY</th>
-                    <th>NOTES</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>flex-center</td>
-                    <td></td>
-                    <td>center the content</td>
-                  </tr>
-                  <tr>
-                    <td>grid-center</td>
-                    <td></td>
-                    <td>center the content</td>
-                  </tr>
-                  <tr>
-                    <td>grid</td>
-                    <td>display: grid</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>gtr-1-1</td>
-                    <td>grid-template-columns:</td>
-                    <td>1fr widths (max 4) or auto (max 3)</td>
-                  </tr>
-                  <tr>
-                    <td>gtc-1-1</td>
-                    <td>grid-template-rows:</td>
-                    <td>1fr widths (max 4) or auto (max 3)</td>
-                  </tr>
-                  <tr>
-                    <td>flex</td>
-                    <td>display: flex;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>flex-wrap</td>
-                    <td>flex-wrap: wrap;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>flex-nowrap</td>
-                    <td>flex-wrap: nowrap;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>flex-row</td>
-                    <td>flex-direction: row;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>flex-column</td>
-                    <td>flex-direction: column;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>fw-500</td>
-                    <td>font-weight:500;</td>
-                    <td>100-900</td>
-                  </tr>
-                  <tr>
-                    <td>text-SIDE</td>
-                    <td>text-align: SIDE;</td>
-                    <td>where SIDE can be: left, right, justify, center</td>
-                  </tr>
-                  <tr>
-                    <td>op-15</td>
-                    <td>opacity: 0.15;</td>
-                    <td>0-100, increment by 5</td>
-                  </tr>
-                  <tr>
-                    <td>img-cover</td>
-                    <td>object-fit: cover;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>round</td>
-                    <td>border-radius: 999px;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>italic</td>
-                    <td>font-style: italic;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>underline</td>
-                    <td>text-decoration: underline;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>hidden</td>
-                    <td>display: none;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>pointer</td>
-                    <td>cursor:pointer;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>disable-text-select</td>
-                    <td></td>
-                    <td>don&#39;t allow text selection</td>
-                  </tr>
-                  <tr>
-                    <td>height-100</td>
-                    <td>height: 100%;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>width-100</td>
-                    <td>width: 100%;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>both-100</td>
-                    <td>height: 100%; width: 100%;</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>z-10</td>
-                    <td>z-index</td>
-                    <td>z-10, z-20, z-30, z-40 ,z-50</td>
-                  </tr>
-                  <tr>
-                    <td>temp-bg-col-1</td>
-                    <td></td>
-                    <td>
-                      used when you don&#39;t have any colors defined for the
-                      root variables. (1-6)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>remove-decoration</td>
-                    <td>text-decoration: none;</td>
-                    <td>remove text decorations</td>
-                  </tr>
-                  <tr>
-                    <td>align-text-vertically</td>
-                    <td>display: flex; align-items: center;</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h2 id="classes-generated-from-python-script">
-                Classes generated from python script
-              </h2>
-              <h3 id="current-setup-">Current setup:</h3>
-              <ul>
-                <li>0-100, increment by 2px</li>
-                <li>100-500, increment by 5px</li>
-              </ul>
-              <table>
-                <thead>
-                  <tr>
-                    <th>CLASS_NAME</th>
-                    <th>CSS_PROPERTY</th>
-                    <th>NOTES</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>gap-0</td>
-                    <td>gap</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>gap-h-0</td>
-                    <td>row-gap</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>gap-w-0</td>
-                    <td>column-gap</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>h-0</td>
-                    <td>height</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>max-h-0</td>
-                    <td>max-height</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>min-h-0</td>
-                    <td>min-height</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td>same applies to width, just change h -&gt; w</td>
-                  </tr>
-                  <tr>
-                    <td>m-0</td>
-                    <td>margin</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>mr-0</td>
-                    <td>margin-right</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>ml-0</td>
-                    <td>margin-left</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>mt-0</td>
-                    <td>margin-top</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>mb-0</td>
-                    <td>margin-bottom</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td>same applies to padding, just change m -&gt; p</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h2 id="classes-dependent-on-root-variables">
-                Classes Dependent on root variables
-              </h2>
-              <table>
-                <thead>
-                  <tr>
-                    <th>CLASS_NAME</th>
-                    <th>CSS_PROPERTY</th>
-                    <th>NOTES</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>font-fam-1</td>
-                    <td>font-family</td>
-                    <td>1-6</td>
-                  </tr>
-                  <tr>
-                    <td>bg-col-1</td>
-                    <td>background-color</td>
-                    <td>1-6</td>
-                  </tr>
-                  <tr>
-                    <td>text-col-1</td>
-                    <td>color</td>
-                    <td>1-6</td>
-                  </tr>
-                  <tr>
-                    <td>border-rad-1</td>
-                    <td>border-radius</td>
-                    <td>1-6</td>
-                  </tr>
-                  <tr>
-                    <td>header-1</td>
-                    <td>font-size &amp; line-height</td>
-                    <td>1-6, font-size dependent on root varaible</td>
-                  </tr>
-                  <tr>
-                    <td>letter-spacing-1</td>
-                    <td>letter-spacing</td>
-                    <td>1-6</td>
-                  </tr>
-                  <tr>
-                    <td>shadow-1</td>
-                    <td>box-shadow:</td>
-                    <td>1-6</td>
-                  </tr>
-                  <tr>
-                    <td>fs-1</td>
-                    <td>font-size</td>
-                    <td>1-9</td>
-                  </tr>
-                  <tr>
-                    <td>border-x-x</td>
-                    <td>border</td>
-                    <td>border-HEIGHT-COLOR (1-3, 1-3)</td>
-                  </tr>
-                  <tr>
-                    <td>text-1</td>
-                    <td>font-size &amp; line-height</td>
-                    <td>1-4, font-size dependent on root varaible</td>
-                  </tr>
-                  <tr>
-                    <td>hr-x-x</td>
-                    <td>border, height, background</td>
-                    <td>hr-HEIGHT-COLOR (1-3, 1-3)</td>
-                  </tr>
-                  <tr>
-                    <td>transition-1</td>
-                    <td>transition:</td>
-                    <td>
-                      1-3, used as a helper class so that you can attach them to
-                      existing elements
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- md-tables -->
-            <!-- md-tables -->
-            <!-- md-tables -->
           </div>
         </div>
 
-        <div></div>
+        <div class="pt-20"></div>
+
         <div class="header-4 mb-14">
-          Preview for some of the root variable predefined classes
+          <!-- Preview for some of the root variable predefined classes -->
         </div>
         <!-- header-x -->
         <div class="class_name_header">fs-x</div>
@@ -768,9 +454,9 @@
           <div class="bg_color_box border-1 border-1-1">border-1-1</div>
           <div class="bg_color_box border-1 border-1-2">border-1-2</div>
           <div class="bg_color_box border-1 border-1-3">border-1-3</div>
-          <div class="bg_color_box border-1 border-2-1">border-1-1</div>
-          <div class="bg_color_box border-1 border-2-2">border-1-2</div>
-          <div class="bg_color_box border-1 border-2-3">border-1-3</div>
+          <div class="bg_color_box border-1 border-2-1">border-2-1</div>
+          <div class="bg_color_box border-1 border-2-2">border-2-2</div>
+          <div class="bg_color_box border-1 border-2-3">border-2-3</div>
           <div class="bg_color_box border-1 border-3-1">border-3-1</div>
           <div class="bg_color_box border-1 border-3-2">border-3-2</div>
           <div class="bg_color_box border-1 border-3-3">border-3-3</div>
@@ -918,6 +604,324 @@
             </div>
           </div>
         </div>
+        <!-- md-tables -->
+        <!-- md-tables -->
+        <div class="md-tables">
+          <h2 id="classes-not-dependent-on-root-variables">
+            Classes not dependent on root variables
+          </h2>
+          <table>
+            <thead>
+              <tr>
+                <th>CLASS_NAME</th>
+                <th>CSS_PROPERTY</th>
+                <th>NOTES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>flex-center</td>
+                <td></td>
+                <td>center the content</td>
+              </tr>
+              <tr>
+                <td>grid-center</td>
+                <td></td>
+                <td>center the content</td>
+              </tr>
+              <tr>
+                <td>grid</td>
+                <td>display: grid</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>gtr-1-1</td>
+                <td>grid-template-columns:</td>
+                <td>1fr widths (max 4) or auto (max 3)</td>
+              </tr>
+              <tr>
+                <td>gtc-1-1</td>
+                <td>grid-template-rows:</td>
+                <td>1fr widths (max 4) or auto (max 3)</td>
+              </tr>
+              <tr>
+                <td>flex</td>
+                <td>display: flex;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>flex-wrap</td>
+                <td>flex-wrap: wrap;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>flex-nowrap</td>
+                <td>flex-wrap: nowrap;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>flex-row</td>
+                <td>flex-direction: row;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>flex-column</td>
+                <td>flex-direction: column;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>fw-500</td>
+                <td>font-weight:500;</td>
+                <td>100-900</td>
+              </tr>
+              <tr>
+                <td>text-SIDE</td>
+                <td>text-align: SIDE;</td>
+                <td>where SIDE can be: left, right, justify, center</td>
+              </tr>
+              <tr>
+                <td>op-15</td>
+                <td>opacity: 0.15;</td>
+                <td>0-100, increment by 5</td>
+              </tr>
+              <tr>
+                <td>img-cover</td>
+                <td>object-fit: cover;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>round</td>
+                <td>border-radius: 999px;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>italic</td>
+                <td>font-style: italic;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>underline</td>
+                <td>text-decoration: underline;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>hidden</td>
+                <td>display: none;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>pointer</td>
+                <td>cursor:pointer;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>disable-text-select</td>
+                <td></td>
+                <td>don&#39;t allow text selection</td>
+              </tr>
+              <tr>
+                <td>height-100</td>
+                <td>height: 100%;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>width-100</td>
+                <td>width: 100%;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>both-100</td>
+                <td>height: 100%; width: 100%;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>z-10</td>
+                <td>z-index</td>
+                <td>z-10, z-20, z-30, z-40 ,z-50</td>
+              </tr>
+              <tr>
+                <td>temp-bg-col-1</td>
+                <td></td>
+                <td>
+                  used when you don&#39;t have any colors defined for the root
+                  variables. (1-6)
+                </td>
+              </tr>
+              <tr>
+                <td>remove-decoration</td>
+                <td>text-decoration: none;</td>
+                <td>remove text decorations</td>
+              </tr>
+              <tr>
+                <td>align-text-vertically</td>
+                <td>display: flex; align-items: center;</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 id="classes-generated-from-python-script">
+            Classes generated from python script
+          </h2>
+          <h3 id="current-setup-">Current setup:</h3>
+          <ul>
+            <li>0-100, increment by 2px</li>
+            <li>100-500, increment by 5px</li>
+          </ul>
+          <table>
+            <thead>
+              <tr>
+                <th>CLASS_NAME</th>
+                <th>CSS_PROPERTY</th>
+                <th>NOTES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>gap-0</td>
+                <td>gap</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>gap-h-0</td>
+                <td>row-gap</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>gap-w-0</td>
+                <td>column-gap</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>h-0</td>
+                <td>height</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>max-h-0</td>
+                <td>max-height</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>min-h-0</td>
+                <td>min-height</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>same applies to width, just change h -&gt; w</td>
+              </tr>
+              <tr>
+                <td>m-0</td>
+                <td>margin</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>mr-0</td>
+                <td>margin-right</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>ml-0</td>
+                <td>margin-left</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>mt-0</td>
+                <td>margin-top</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>mb-0</td>
+                <td>margin-bottom</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>same applies to padding, just change m -&gt; p</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 id="classes-dependent-on-root-variables">
+            Classes Dependent on root variables
+          </h2>
+          <table>
+            <thead>
+              <tr>
+                <th>CLASS_NAME</th>
+                <th>CSS_PROPERTY</th>
+                <th>NOTES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>font-fam-1</td>
+                <td>font-family</td>
+                <td>1-6</td>
+              </tr>
+              <tr>
+                <td>bg-col-1</td>
+                <td>background-color</td>
+                <td>1-6</td>
+              </tr>
+              <tr>
+                <td>text-col-1</td>
+                <td>color</td>
+                <td>1-6</td>
+              </tr>
+              <tr>
+                <td>border-rad-1</td>
+                <td>border-radius</td>
+                <td>1-6</td>
+              </tr>
+              <tr>
+                <td>header-1</td>
+                <td>font-size &amp; line-height</td>
+                <td>1-6, font-size dependent on root varaible</td>
+              </tr>
+              <tr>
+                <td>letter-spacing-1</td>
+                <td>letter-spacing</td>
+                <td>1-6</td>
+              </tr>
+              <tr>
+                <td>shadow-1</td>
+                <td>box-shadow:</td>
+                <td>1-6</td>
+              </tr>
+              <tr>
+                <td>fs-1</td>
+                <td>font-size</td>
+                <td>1-9</td>
+              </tr>
+              <tr>
+                <td>border-x-x</td>
+                <td>border</td>
+                <td>border-HEIGHT-COLOR (1-3, 1-3)</td>
+              </tr>
+              <tr>
+                <td>text-1</td>
+                <td>font-size &amp; line-height</td>
+                <td>1-4, font-size dependent on root varaible</td>
+              </tr>
+              <tr>
+                <td>hr-x-x</td>
+                <td>border, height, background</td>
+                <td>hr-HEIGHT-COLOR (1-3, 1-3)</td>
+              </tr>
+              <tr>
+                <td>transition-1</td>
+                <td>transition:</td>
+                <td>
+                  1-3, used as a helper class so that you can attach them to
+                  existing elements
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- md-tables -->
+        <!-- md-tables -->
       </div>
     </div>
   </body>
