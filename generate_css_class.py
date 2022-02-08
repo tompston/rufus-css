@@ -50,9 +50,9 @@ class_value_range = [
     # values for the loop that will generate the auto-incrementing css classes
     # start , end, increment
     [0,     102,    2],
-    [100,   502,    5]
+    [100,   402,    5],
+    [400,   802,    10]
 ]
-
 
 css_unit = "px"
 

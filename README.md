@@ -84,7 +84,8 @@ wget https://raw.githubusercontent.com/tompston/rufus-css/main/rufus.css
 ### Current setup:
 
 - 0-100, increment by 2px
-- 100-500, increment by 5px
+- 100-400, increment by 5px
+- 400-800, increment by 10px
 
 | CLASS_NAME | CSS_PROPERTY  | NOTES                                       |
 | ---------- | ------------- | ------------------------------------------- |
