@@ -26,6 +26,9 @@
   --text-col-5: #ffffff;
   --text-col-6: #ffffff;
 
+  --selection-bg-col: rgba(126, 167, 243, 0.65);
+  --selection-text-col: rgb(255, 255, 255);
+
   /* font-size */
   --fs-1: 78px;
   --fs-2: 64px;
@@ -145,7 +148,8 @@ html {
   scroll-behavior: smooth;
   height: 100%;
   -webkit-text-size-adjust: 100%;
-  /* make the scrollbar not take up the total space of the page, so that there is no shift once it appears / dissapears */
+  /* make the scrollbar not take up the total space of the page, 
+  so that there is no shift once it appears / dissapears */
   overflow-y: scroll;
   cursor: default;
 }
@@ -168,8 +172,8 @@ body {
 */
 
 ::selection {
-  color: white;
-  background-color: rgba(126, 167, 243, 0.65);
+  color: var(--selection-text-col);
+  background-color: var(--selection-bg-col);
 }
 
 h1,
@@ -184,16 +188,24 @@ pre {
   margin: 0;
 }
 
+/* 
+remove the init font size for h tags so that easily can change divs into h tags
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: unset;
+  font-family: var(--font-fam-1);
+}
+
 ul,
 ol {
   /* list-style: none; */
   margin: 0px;
   padding-left: 33px;
-}
-
-/*  */
-ol > li {
-  margin-bottom: 14px;
 }
 
 button {
@@ -205,7 +217,6 @@ button {
   border: none;
   padding: 0;
   /* disables text select */
-  -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
@@ -213,9 +224,17 @@ button {
   user-select: none;
 }
 
+code {
+  background: rgb(243, 243, 243);
+  color: rgb(48, 48, 48);
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+
 img {
   /* disables text select */
-  -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;

@@ -26,6 +26,9 @@
   --text-col-5: #ffffff;
   --text-col-6: #ffffff;
 
+  --selection-bg-col: rgba(126, 167, 243, 0.65);
+  --selection-text-col: rgb(255, 255, 255);
+
   /* font-size */
   --fs-1: 78px;
   --fs-2: 64px;
@@ -145,7 +148,8 @@ html {
   scroll-behavior: smooth;
   height: 100%;
   -webkit-text-size-adjust: 100%;
-  /* make the scrollbar not take up the total space of the page, so that there is no shift once it appears / dissapears */
+  /* make the scrollbar not take up the total space of the page, 
+  so that there is no shift once it appears / dissapears */
   overflow-y: scroll;
   cursor: default;
 }
@@ -168,8 +172,8 @@ body {
 */
 
 ::selection {
-  color: white;
-  background-color: rgba(126, 167, 243, 0.65);
+  color: var(--selection-text-col);
+  background-color: var(--selection-bg-col);
 }
 
 h1,
@@ -184,16 +188,24 @@ pre {
   margin: 0;
 }
 
+/* 
+remove the init font size for h tags so that easily can change divs into h tags
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: unset;
+  font-family: var(--font-fam-1);
+}
+
 ul,
 ol {
   /* list-style: none; */
   margin: 0px;
   padding-left: 33px;
-}
-
-/*  */
-ol > li {
-  margin-bottom: 14px;
 }
 
 button {
@@ -205,7 +217,6 @@ button {
   border: none;
   padding: 0;
   /* disables text select */
-  -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
@@ -213,9 +224,17 @@ button {
   user-select: none;
 }
 
+code {
+  background: rgb(243, 243, 243);
+  color: rgb(48, 48, 48);
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+
 img {
   /* disables text select */
-  -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
@@ -822,14 +841,67 @@ https://getcssscan.com/css-box-shadow-examples*/
 }
 
 .disable-text-select {
-  -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   user-select: none;
 }
-/* rows */
+
+
+
+/* 
+credits
+https://css-irl.info/animating-underlines/ 
+*/
+
+/* Animated link tag 1 */
+.animated-link-tag-1 {
+  display: block;
+  position: relative;
+}
+.animated-link-tag-1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.05em;
+  height: 2px;
+  background-color: var(--bg-col-1);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+.animated-link-tag-1:hover::after,
+.animated-link-tag-1:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.1em, 0);
+}
+
+/* Animated link tag 2 */
+.animated-link-tag-2 {
+  display: block;
+  position: relative;
+}
+.animated-link-tag-2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.05em;
+  height: 2px;
+  background-color: var(--bg-col-1);
+  opacity: 0;
+  transition: opacity 300ms, transform 200ms;
+  transform: translate3d(-50%, 0, 0);
+}
+.animated-link-tag-2:hover::after,
+.animated-link-tag-2:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+  transform: translate3d(0, 0, 0);
+}/* rows */
 .gtr-1-1-1-1 {
   grid-template-rows: 1fr 1fr 1fr 1fr;
 }

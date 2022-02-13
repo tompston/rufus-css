@@ -48,29 +48,27 @@
       table {
         /* font-family: arial, sans-serif; */
         width: 100%;
-        border-radius: var(--border-rad-3);
+        /* border-radius: var(--border-rad-3); */
+        border: 1px solid rgba(180, 180, 180, 0.34);
         overflow: hidden;
         margin-bottom: 40px;
-        text-align: left;
-        box-shadow: var(--shadow-2);
-        border-collapse: collapse;
+        /* text-align: left; */
+        /* box-shadow: var(--shadow-5); */
+        /* border-collapse: collapse; */
       }
 
       th {
-        background: rgb(36, 36, 36);
-        background: rgb(17, 17, 17);
+        background: rgb(41, 41, 41);
         color: rgb(255, 255, 255);
-        font-weight: 500;
+        /* font-weight: 500; */
         font-family: Roboto Mono, Menlo, monospace;
         padding: 12px var(--table-px);
         font-size: var(--fs-9);
-        /* font-weight: 600; */
       }
       td {
         padding: 8px var(--table-px);
         font-family: Roboto Mono, Menlo, monospace;
-        /* color: rgb(43, 43, 43); */
-        color: rgb(26, 26, 26);
+        color: rgb(53, 53, 53);
       }
       tr:nth-child(even) {
         background-color: #f7f7f7;
@@ -105,18 +103,16 @@
         font-size: var(--fs-8);
       }
 
+      h1,
       h3,
       h2,
       .class_name_header {
-        /* font-family: Roboto Mono, Menlo, monospace; */
         font-size: var(--fs-4);
-        margin-bottom: 3px;
+        margin-bottom: 10px;
+        /* margin-bottom: 0px; */
+        font-family: var(--font-fam-1);
         font-weight: 500;
-        font-weight: 600;
-      }
-
-      h2 {
-        margin-bottom: 0px;
+        line-height: 0.9;
       }
 
       h3 {
@@ -149,7 +145,6 @@
       .border_rad_box {
         padding: 0px 8px;
       }
-
       .label_example_grid {
         display: grid;
         grid-template-columns: 160px auto;
@@ -158,6 +153,9 @@
       .class_grid_ {
         display: grid;
         gap: 40px;
+      }
+      .info_mini_header {
+        font-size: var(--fs-6);
       }
 
       @media screen and (max-width: 800px) {
@@ -169,10 +167,6 @@
         .color_grid {
           margin-bottom: 65px;
         }
-      }
-
-      .info_mini_header {
-        font-size: var(--fs-6);
       }
 
       @media screen and (max-width: 600px) {
@@ -188,17 +182,23 @@
       <div class="max-width-1 mb-94">
         <!--  -->
         <div class="top_content">
-          <div class="fs-1 text-center">Rufus CSS</div>
-          <div class="text-center header-5">
-            Self-defined, utility-first, Tailwind-inspired CSS library.
+          <div class="my-140">
+            <div class="fs-1 text-center">Rufus CSS</div>
+            <div class="text-center header-5">
+              Self-defined, utility-first, Tailwind-inspired CSS library.
+            </div>
           </div>
 
           <div class="text-2 mt-50">
-            <h2 id="why-">Why?</h2>
-            <p>
-              I like the concept of tailwind, but don&#39;t like using rem
-              units. + wanted something that you can tweak easier.
-            </p>
+            <div class="mb-40 temp-bg-col-3-">
+              <div class="class_name_header">Why?</div>
+              <div>
+                <p class="text-2 op-80">
+                  I like the concept of tailwind, but don&#39;t like using rem
+                  units. + wanted something that you can tweak easier.
+                </p>
+              </div>
+            </div>
 
             <div class="mt-30">
               <div class="header-4-">
@@ -511,6 +511,38 @@
           </div>
         </div>
 
+        <!-- animated-link-tag-x -->
+        <div class="box_divide">
+          <div class="class_name_header">
+            animated-link-tag-x
+            <span
+              ><a
+                href="https://css-irl.info/animating-underlines/ "
+                target="_blank"
+                rel="noopener noreferrer"
+                class="remove-decoration op-30 "
+              >
+                (credits)</a
+              ></span
+            >
+          </div>
+          <div class="flex flex-row gap-30 mb-30">
+            <div class="">
+              <div class="w-60 h-60 animated-link-tag-1 temp-bg-col-5">1</div>
+            </div>
+            <div class="">
+              <div class="w-60 h-60 animated-link-tag-2 temp-bg-col-5">2</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box_divide">
+          <div class="class_name_header">code</div>
+          <div class="flex flex-row gap-30 mb-30">
+            <code>The quick brown fox jumps over the lazy dog</code>
+          </div>
+        </div>
+
         <!-- button-x -->
         <!-- <div class="class_name_header">button-x</div>
         <div class="box_divide flex gap-20">
@@ -761,10 +793,10 @@
           <h2 id="classes-generated-from-python-script">
             Classes generated from python script
           </h2>
-          <h3 id="current-setup-">Current setup:</h3>
           <ul>
             <li>0-100, increment by 2px</li>
-            <li>100-500, increment by 5px</li>
+            <li>100-400, increment by 5px</li>
+            <li>400-800, increment by 10px</li>
           </ul>
           <table>
             <thead>

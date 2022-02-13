@@ -129,7 +129,7 @@ wget https://raw.githubusercontent.com/tompston/rufus-css/main/rufus.css
 ## Command to generate and combine css
 
     # from the root dir, using bash
-    python generate_css_class.py && npm run concat-css
+    npm run build
 
 ## Purging CSS for Single Page Apps
 
