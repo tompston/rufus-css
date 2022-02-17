@@ -20,6 +20,11 @@
         --table-px: 21px;
       }
 
+      ul,
+      ol {
+        padding-right: 17px;
+      }
+
       ul li {
         padding: 9px 0px;
         padding-top: 14px;
@@ -78,7 +83,7 @@
       }
       .code_box {
         background-color: #f5f5f5c0;
-        font-family: Consolas;
+        font-family: Roboto Mono, Menlo, monospace;
         padding: 17px;
         line-height: 1.3;
         border-radius: var(--border-rad-3);
@@ -190,7 +195,7 @@
           </div>
 
           <div class="text-2 mt-50">
-            <div class="mb-40 temp-bg-col-3-">
+            <div class="mb-40 temp-main-col-3-">
               <div class="class_name_header">Why?</div>
               <div>
                 <p class="text-2 op-80">
@@ -258,7 +263,7 @@
                       predefined classes for css properties that change based on
                       the project ( like
                       <code
-                        >font-family, font-size, bacground-color, color,
+                        >font-family, font-size, background-color, color,
                         shadow</code
                       >
                       )
@@ -299,7 +304,7 @@
                   <ul>
                     <li>
                       Instead of defining a new color when creating a class for
-                      an element, just use the <code>bg-col-1</code> root
+                      an element, just use the <code>main-col-1</code> root
                       variable. As the value of it is mapped to the class, you
                       can define it inside the html, or call it from the css
                       file Same applies to transitions, font-sizes, font-family
@@ -404,26 +409,38 @@
           </div>
         </div>
 
-        <!-- temp-bg-col- -->
-        <div class="class_name_header">temp-bg-col-x</div>
+        <!-- temp-main-col- -->
+        <div class="class_name_header">main-col-x</div>
         <div class="grid color_grid gap-10">
-          <div class="temp-bg-col-1 bg_color_box text-col-2">temp-bg-col-1</div>
-          <div class="temp-bg-col-2 bg_color_box text-col-2">temp-bg-col-2</div>
-          <div class="temp-bg-col-3 bg_color_box text-col-2">temp-bg-col-3</div>
-          <div class="temp-bg-col-4 bg_color_box">temp-bg-col-4</div>
-          <div class="temp-bg-col-5 bg_color_box">temp-bg-col-5</div>
-          <div class="temp-bg-col-6 bg_color_box">temp-bg-col-6</div>
+          <div class="main-col-1 bg_color_box text-col-2">main-col-1</div>
+          <div class="main-col-2 bg_color_box border-1-2">main-col-2</div>
+          <div class="main-col-3 bg_color_box border-1-2">main-col-3</div>
+          <div class="main-col-4 bg_color_box border-1-2">main-col-4</div>
+          <div class="main-col-5 bg_color_box border-1-2">main-col-5</div>
+          <div class="main-col-6 bg_color_box border-1-2">main-col-6</div>
+          <div class="main-col-7 bg_color_box border-1-2">main-col-7</div>
+          <div class="main-col-8 bg_color_box border-1-2">main-col-8</div>
+          <div class="main-col-9 bg_color_box border-1-2">main-col-9</div>
         </div>
 
-        <!-- temp-bg-col- -->
-        <div class="class_name_header">bg-col-x</div>
+        <!-- temp-main-col- -->
+        <div class="class_name_header">temp-main-col-x</div>
         <div class="grid color_grid gap-10">
-          <div class="bg-col-1 bg_color_box text-col-2">bg-col-1</div>
-          <div class="bg-col-2 bg_color_box border-1-2">bg-col-2</div>
-          <div class="bg-col-3 bg_color_box border-1-2">bg-col-3</div>
-          <div class="bg-col-4 bg_color_box border-1-2">bg-col-4</div>
-          <div class="bg-col-5 bg_color_box border-1-2">bg-col-5</div>
-          <div class="bg-col-5 bg_color_box border-1-2">bg-col-6</div>
+          <div class="temp-main-col-1 bg_color_box text-col-2">
+            temp-main-col-1
+          </div>
+          <div class="temp-main-col-2 bg_color_box text-col-2">
+            temp-main-col-2
+          </div>
+          <div class="temp-main-col-3 bg_color_box text-col-2">
+            temp-main-col-3
+          </div>
+          <div class="temp-main-col-4 bg_color_box">temp-main-col-4</div>
+          <div class="temp-main-col-5 bg_color_box">temp-main-col-5</div>
+          <div class="temp-main-col-6 bg_color_box">temp-main-col-6</div>
+          <div class="temp-main-col-7 bg_color_box">temp-main-col-7</div>
+          <div class="temp-main-col-8 bg_color_box">temp-main-col-8</div>
+          <div class="temp-main-col-9 bg_color_box">temp-main-col-9</div>
         </div>
 
         <!-- shadow-x -->
@@ -451,15 +468,15 @@
         <!-- border-rad-x -->
         <div class="class_name_header">border-x-x</div>
         <div class="grid color_grid gap-10">
-          <div class="bg_color_box border-1 border-1-1">border-1-1</div>
-          <div class="bg_color_box border-1 border-1-2">border-1-2</div>
-          <div class="bg_color_box border-1 border-1-3">border-1-3</div>
-          <div class="bg_color_box border-1 border-2-1">border-2-1</div>
-          <div class="bg_color_box border-1 border-2-2">border-2-2</div>
-          <div class="bg_color_box border-1 border-2-3">border-2-3</div>
-          <div class="bg_color_box border-1 border-3-1">border-3-1</div>
-          <div class="bg_color_box border-1 border-3-2">border-3-2</div>
-          <div class="bg_color_box border-1 border-3-3">border-3-3</div>
+          <div class="bg_color_box border-1-1">border-1-1</div>
+          <div class="bg_color_box border-1-2">border-1-2</div>
+          <div class="bg_color_box border-1-3">border-1-3</div>
+          <div class="bg_color_box border-2-1">border-2-1</div>
+          <div class="bg_color_box border-2-2">border-2-2</div>
+          <div class="bg_color_box border-2-3">border-2-3</div>
+          <div class="bg_color_box border-3-1">border-3-1</div>
+          <div class="bg_color_box border-3-2">border-3-2</div>
+          <div class="bg_color_box border-3-3">border-3-3</div>
         </div>
 
         <!-- transition-x -->
@@ -520,7 +537,7 @@
                 href="https://css-irl.info/animating-underlines/ "
                 target="_blank"
                 rel="noopener noreferrer"
-                class="remove-decoration op-30 "
+                class="remove-decorations op-30"
               >
                 (credits)</a
               ></span
@@ -528,10 +545,10 @@
           </div>
           <div class="flex flex-row gap-30 mb-30">
             <div class="">
-              <div class="w-60 h-60 animated-link-tag-1 temp-bg-col-5">1</div>
+              <div class="w-60 h-60 animated-link-tag-1 temp-main-col-5">1</div>
             </div>
             <div class="">
-              <div class="w-60 h-60 animated-link-tag-2 temp-bg-col-5">2</div>
+              <div class="w-60 h-60 animated-link-tag-2 temp-main-col-5">2</div>
             </div>
           </div>
         </div>
@@ -772,15 +789,15 @@
                 <td>z-10, z-20, z-30, z-40 ,z-50</td>
               </tr>
               <tr>
-                <td>temp-bg-col-1</td>
+                <td>temp-main-col-1</td>
                 <td></td>
                 <td>
                   used when you don&#39;t have any colors defined for the root
-                  variables. (1-6)
+                  variables. (1-9)
                 </td>
               </tr>
               <tr>
-                <td>remove-decoration</td>
+                <td>remove-decorations</td>
                 <td>text-decoration: none;</td>
                 <td>remove text decorations</td>
               </tr>
@@ -887,13 +904,18 @@
             </thead>
             <tbody>
               <tr>
-                <td>font-fam-1</td>
-                <td>font-family</td>
-                <td>1-6</td>
+                <td>fs-1</td>
+                <td>font-size</td>
+                <td>1-9</td>
               </tr>
               <tr>
-                <td>bg-col-1</td>
+                <td>main-col-1</td>
                 <td>background-color</td>
+                <td>1-9</td>
+              </tr>
+              <tr>
+                <td>font-fam-1</td>
+                <td>font-family</td>
                 <td>1-6</td>
               </tr>
               <tr>
@@ -920,11 +942,6 @@
                 <td>shadow-1</td>
                 <td>box-shadow:</td>
                 <td>1-6</td>
-              </tr>
-              <tr>
-                <td>fs-1</td>
-                <td>font-size</td>
-                <td>1-9</td>
               </tr>
               <tr>
                 <td>border-x-x</td>
