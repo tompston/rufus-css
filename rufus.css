@@ -11,12 +11,15 @@
   --font-fam-6: sans-serif;
 
   /* define the color palette */
-  --bg-col-1: #000000;
-  --bg-col-2: #ffffff;
-  --bg-col-3: #ffffff;
-  --bg-col-4: #ffffff;
-  --bg-col-5: #ffffff;
-  --bg-col-6: #ffffff;
+  --main-col-1: #000000;
+  --main-col-2: #ffffff;
+  --main-col-3: #ffffff;
+  --main-col-4: #ffffff;
+  --main-col-5: #ffffff;
+  --main-col-6: #ffffff;
+  --main-col-7: #ffffff;
+  --main-col-8: #ffffff;
+  --main-col-9: #ffffff;
 
   /* font-color */
   --text-col-1: #161616;
@@ -25,9 +28,6 @@
   --text-col-4: #ffffff;
   --text-col-5: #ffffff;
   --text-col-6: #ffffff;
-
-  --selection-bg-col: rgba(126, 167, 243, 0.65);
-  --selection-text-col: rgb(255, 255, 255);
 
   /* font-size */
   --fs-1: 78px;
@@ -54,10 +54,6 @@
   --hr-col-3: rgba(29, 29, 29, 0.1);
 
   /* border */
-  --border-1: 1px solid rgba(48, 48, 48, 0.2);
-  --border-2: 2px solid rgba(48, 48, 48, 0.15);
-  --border-3: 3px solid rgba(48, 48, 48, 0.08);
-
   --border-1-1: 1px solid rgba(48, 48, 48, 0.3);
   --border-1-2: 1px solid rgba(48, 48, 48, 0.15);
   --border-1-3: 1px solid rgba(48, 48, 48, 0.08);
@@ -92,9 +88,19 @@
   --letter-spacing-4: 0em;
   --letter-spacing-5: -0.025em;
   --letter-spacing-6: -0.05em;
+
+  --selection-main-col: rgba(126, 167, 243, 0.65);
+  --selection-text-col: rgb(255, 255, 255);
 }
 
 /* 
+
+--- Centering content + full width backgrounds in html
+
+    <div class="flex-center">
+        <div class="max-width-1">content</div>
+    </div>
+
 
 --- Purging CSS for Single Page Apps
 
@@ -129,13 +135,6 @@ https://stackoverflow.com/questions/2225585/how-to-change-a-div-padding-without-
      box-sizing: border-box; 
 
 
---- Centering content + full width backgrounds in html
-
-    <div class="flex-center">
-        <div class="max-width-1">content</div>
-    </div>
-
-
 --- Automatic grid example
 
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -165,6 +164,7 @@ body {
 }
 
 /* Other possible fonts
+
   font-family: "Helvetica", Arial, sans-serif;
   font-family: Inter, system-ui, sans-serif;
   font-family: Tenor Sans, Georgia, serif;
@@ -173,7 +173,7 @@ body {
 
 ::selection {
   color: var(--selection-text-col);
-  background-color: var(--selection-bg-col);
+  background-color: var(--selection-main-col);
 }
 
 h1,
@@ -208,6 +208,17 @@ ol {
   padding-left: 33px;
 }
 
+/* disable text select utility class + applied to buttons and images */
+.disable-text-select,
+button,
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
 button {
   outline: inherit;
   background: none;
@@ -216,12 +227,6 @@ button {
   font: inherit;
   border: none;
   padding: 0;
-  /* disables text select */
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  user-select: none;
 }
 
 code {
@@ -230,16 +235,6 @@ code {
   font-size: 14px;
   padding: 5px 10px;
   border-radius: 6px;
-}
-
-
-img {
-  /* disables text select */
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  user-select: none;
 }
 
 input,
@@ -323,43 +318,61 @@ a:active {
 }
 
 /* background-color */
-.bg-col-1 {
-  background-color: var(--bg-col-1);
+.main-col-1 {
+  background-color: var(--main-col-1);
 }
-.bg-col-2 {
-  background-color: var(--bg-col-2);
+.main-col-2 {
+  background-color: var(--main-col-2);
 }
-.bg-col-3 {
-  background-color: var(--bg-col-3);
+.main-col-3 {
+  background-color: var(--main-col-3);
 }
-.bg-col-4 {
-  background-color: var(--bg-col-4);
+.main-col-4 {
+  background-color: var(--main-col-4);
 }
-.bg-col-5 {
-  background-color: var(--bg-col-5);
+.main-col-5 {
+  background-color: var(--main-col-5);
 }
-.bg-col-6 {
-  background-color: var(--bg-col-6);
+.main-col-6 {
+  background-color: var(--main-col-6);
+}
+.main-col-7 {
+  background-color: var(--main-col-7);
+}
+.main-col-8 {
+  background-color: var(--main-col-8);
+}
+.main-col-9 {
+  background-color: var(--main-col-9);
 }
 
 /* tw palette */
-.temp-bg-col-1 {
+.temp-main-col-1 {
   background-color: #071330;
 }
-.temp-bg-col-2 {
+.temp-main-col-2 {
   background-color: #0c4160;
 }
-.temp-bg-col-3 {
+.temp-main-col-3 {
   background-color: #738fa7;
 }
-.temp-bg-col-4 {
+.temp-main-col-4 {
   background-color: #c3ceda;
 }
-.temp-bg-col-5 {
+.temp-main-col-5 {
   background-color: #c3ceda57;
 }
-.temp-bg-col-6 {
+.temp-main-col-6 {
   background-color: #e8e8e857;
+}
+.temp-main-col-7 {
+  background-color: #e8e8e83a;
+}
+.temp-main-col-8 {
+  background-color: #e8e8e836;
+}
+.temp-main-col-9 {
+  background-color: #e8e8e828;
 }
 
 /* bord-rad */
@@ -588,16 +601,6 @@ https://getcssscan.com/css-box-shadow-examples*/
 }
 
 /* border */
-.border-1 {
-  border: var(--border-1);
-}
-.border-2 {
-  border: var(--border-2);
-}
-.border-3 {
-  border: var(--border-3);
-}
-
 .border-1-1 {
   border: var(--border-1-1);
 }
@@ -639,7 +642,7 @@ https://getcssscan.com/css-box-shadow-examples*/
   /* border-radius: 7px; */
   border: 1px solid rgba(177, 174, 174, 0.5);
   padding: 12px 15px;
-  /* center text */
+  /* center content */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -836,18 +839,9 @@ https://getcssscan.com/css-box-shadow-examples*/
   align-items: center;
 }
 
-.remove-decoration {
+.remove-decorations {
   text-decoration: none;
 }
-
-.disable-text-select {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  user-select: none;
-}
-
 
 
 /* 
@@ -868,7 +862,8 @@ https://css-irl.info/animating-underlines/
   width: 100%;
   height: 0.05em;
   height: 2px;
-  background-color: var(--bg-col-1);
+  /* background-color: var(--bg-col-1); */
+  background: #000;
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
 }
@@ -878,7 +873,7 @@ https://css-irl.info/animating-underlines/
   transform: translate3d(0, 0.1em, 0);
 }
 
-/* Animated link tag 2 */
+
 .animated-link-tag-2 {
   display: block;
   position: relative;
@@ -891,7 +886,8 @@ https://css-irl.info/animating-underlines/
   width: 100%;
   height: 0.05em;
   height: 2px;
-  background-color: var(--bg-col-1);
+  /* background-color: var(--bg-col-1); */
+  background: #000;
   opacity: 0;
   transition: opacity 300ms, transform 200ms;
   transform: translate3d(-50%, 0, 0);
