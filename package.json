@@ -5,8 +5,19 @@
   "main": "index.js",
   "scripts": {
     "concat-css": "cat css/* > rufus.css",
-    "build": "python3 generate_css_class.py && npm run concat-css"
+    "postcss:build": "postcss rufus.css -o rufus.css",
+    "build": "python3 generate_css_class.py && npm run concat-css && postcss:build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.17",
+    "postcss": "^8.4.7",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
+    "postcss-preset-env": "^7.4.1",
+    "stylelint": "^14.5.3",
+    "stylelint-config-standard": "^25.0.0"
+  }
 }

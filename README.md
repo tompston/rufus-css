@@ -50,6 +50,7 @@ wget https://raw.githubusercontent.com/tompston/rufus-css/main/rufus.css
 ## Command to generate and combine css
 
     # from the root dir, using bash
+    npm i
     npm run build
 
 If this is added, every time you run `npm run build`, the postbuild script will
