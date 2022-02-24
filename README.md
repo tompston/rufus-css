@@ -2,7 +2,7 @@
 
 Self-defined, utility-first, Tailwind-inspired CSS library.
 
-### [Link to docs](https://tompston.github.io/rufus-css/)
+### [Link to documentation](https://tompston.github.io/rufus-css/)
 
 ## Why?
 
@@ -47,102 +47,10 @@ wget https://raw.githubusercontent.com/tompston/rufus-css/main/rufus.css
    - media queries
    - classes that apply to a group of elements
 
-## Classes not dependent on root variables
-
-| CLASS_NAME            | CSS_PROPERTY                        | NOTES                                                                     |
-| --------------------- | ----------------------------------- | ------------------------------------------------------------------------- |
-| flex-center           |                                     | center the content                                                        |
-| grid-center           |                                     | center the content                                                        |
-| grid                  | display: grid                       |                                                                           |
-| gtr-1-1               | grid-template-columns:              | 1fr widths (max 4) or auto (max 3)                                        |
-| gtc-1-1               | grid-template-rows:                 | 1fr widths (max 4) or auto (max 3)                                        |
-| flex                  | display: flex;                      |                                                                           |
-| flex-wrap             | flex-wrap: wrap;                    |                                                                           |
-| flex-nowrap           | flex-wrap: nowrap;                  |                                                                           |
-| flex-row              | flex-direction: row;                |                                                                           |
-| flex-column           | flex-direction: column;             |                                                                           |
-| fw-500                | font-weight:500;                    | 100-900                                                                   |
-| text-SIDE             | text-align: SIDE;                   | where SIDE can be: left, right, justify, center                           |
-| op-15                 | opacity: 0.15;                      | 0-100, increment by 5                                                     |
-| img-cover             | object-fit: cover;                  |                                                                           |
-| round                 | border-radius: 999px;               |                                                                           |
-| italic                | font-style: italic;                 |                                                                           |
-| underline             | text-decoration: underline;         |                                                                           |
-| hidden                | display: none;                      |                                                                           |
-| pointer               | cursor:pointer;                     |                                                                           |
-| disable-text-select   |                                     | don't allow text selection                                                |
-| height-100            | height: 100%;                       |                                                                           |
-| width-100             | width: 100%;                        |                                                                           |
-| both-100              | height: 100%; width: 100%;          |                                                                           |
-| z-10                  | z-index                             | z-10, z-20, z-30, z-40 ,z-50                                              |
-| temp-main-col-1         |                                     | used when you don't have any colors defined for the root variables. (1-6) |
-| remove-decorations     | text-decoration: none;              | remove text decorations                                                   |
-| align-text-vertically | display: flex; align-items: center; |                                                                           |
-
-## Classes generated from python script
-
-### Current setup:
-
-- 0-100, increment by 2px
-- 100-400, increment by 5px
-- 400-800, increment by 10px
-
-| CLASS_NAME | CSS_PROPERTY  | NOTES                                       |
-| ---------- | ------------- | ------------------------------------------- |
-| gap-0      | gap           |                                             |
-| gap-h-0    | row-gap       |                                             |
-| gap-w-0    | column-gap    |                                             |
-| h-0        | height        |                                             |
-| max-h-0    | max-height    |                                             |
-| min-h-0    | min-height    |                                             |
-|            |               | same applies to width, just change h -> w   |
-| m-0        | margin        |                                             |
-| mr-0       | margin-right  |                                             |
-| ml-0       | margin-left   |                                             |
-| mt-0       | margin-top    |                                             |
-| mb-0       | margin-bottom |                                             |
-|            |               | same applies to padding, just change m -> p |
-
-## Classes Dependent on root variables
-
-| CLASS_NAME       | CSS_PROPERTY               | NOTES                                                                        |
-| ---------------- | -------------------------- | ---------------------------------------------------------------------------- |
-| font-fam-1       | font-family                | 1-6                                                                          |
-| main-col-1         | background-color           | 1-6                                                                          |
-| text-col-1       | color                      | 1-6                                                                          |
-| border-rad-1     | border-radius              | 1-6                                                                          |
-| header-1         | font-size & line-height    | 1-6, font-size dependent on root varaible                                    |
-| letter-spacing-1 | letter-spacing             | 1-6                                                                          |
-| shadow-1         | box-shadow:                | 1-6                                                                          |
-| fs-1             | font-size                  | 1-9                                                                          |
-| border-x-x       | border                     | border-HEIGHT-COLOR (1-3, 1-3)                                               |
-| text-1           | font-size & line-height    | 1-4, font-size dependent on root varaible                                    |
-| hr-x-x           | border, height, background | hr-HEIGHT-COLOR (1-3, 1-3)                                                   |
-| transition-1     | transition:                | 1-3, used as a helper class so that you can attach them to existing elements |
-
-## Other
-
-| CLASS_NAME | CSS_PROPERTY | NOTES |
-| ---------- | ------------ | ----- |
-| button-1   | button       |       |
-
 ## Command to generate and combine css
 
     # from the root dir, using bash
     npm run build
-
-## Purging CSS for Single Page Apps
-
-You don't really need a seperate config file for postcss to purge unused
-classes for small SPA projects. Just copy the following into your package.json file
-
-```json
-  "scripts": {
-    ...
-    "postbuild": "purgecss --css dist/assets/*.css --content dist/assets/*.js -o dist/assets/  --safelist html body"
-  },
-
-```
 
 If this is added, every time you run `npm run build`, the postbuild script will
 also be triggered and purge the css in the dist folder.
@@ -150,11 +58,3 @@ also be triggered and purge the css in the dist folder.
 - note that you need to install purgecss as a dependency, if you're gonna do
   automatic builds for Netlify and stuff
 - The `package.json` example is also written inside the output file, so u don't need to check the repo again.
-
-##
-
-<!-- 
-https://markdowntohtml.com/ 
-
-
--->

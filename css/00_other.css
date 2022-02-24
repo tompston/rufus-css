@@ -1,3 +1,134 @@
+/* ---- Util classes that are not dependent on root variables */
+
+/* -- Resetting inbuilt html stuff */
+ul,
+ol {
+  margin: 0px;
+  padding-left: 33px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0;
+}
+.disable-text-select,
+button,
+img,
+input::placeholder,
+textarea::placeholder {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+button {
+  outline: inherit;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  border: none;
+  padding: 0;
+}
+/* disable text select utility class + applied to buttons, images and inputs */
+code,
+.code {
+  font-family: Roboto Mono, Menlo, monospace;
+  background: rgb(243, 243, 243);
+  color: rgb(48, 48, 48);
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+.code {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input,
+textarea {
+  font-family: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+textarea {
+  resize: vertical;
+}
+input:focus,
+textarea:focus {
+  outline: none; /* removes the border on focus for inputs */
+}
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+  font-size: 14px;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+}
+/*  */
+.border-box {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* flex classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+/* height and width */
+.height-100 {
+  height: 100%;
+}
+.width-100 {
+  width: 100%;
+}
+.both-100 {
+  width: 100%;
+  height: 100%;
+}
+
+/* grid classes */
+.grid {
+  display: grid;
+}
+.grid-center {
+  display: grid;
+  place-content: center;
+}
+
+
 /* opacity */
 .op-0 {
   opacity: 0%;
@@ -109,6 +240,7 @@
   z-index: 50;
 }
 
+
 /* text-side */
 .text-left {
   text-align: left;
@@ -140,26 +272,29 @@
   -o-object-fit: cover;
   object-fit: cover;
 }
-
 .pointer {
   cursor: pointer;
+}
+
+.hover-pointer:hover{
+  cursor: pointer;
+}
+.hover-underline:hover{
+  text-decoration: underline;
 }
 
 .align-text-vertically {
   display: flex;
   align-items: center;
 }
-
 .remove-decorations {
   text-decoration: none;
 }
-
 
 /* 
 credits
 https://css-irl.info/animating-underlines/ 
 */
-
 /* Animated link tag 1 */
 .animated-link-tag-1 {
   display: block;
@@ -173,7 +308,6 @@ https://css-irl.info/animating-underlines/
   width: 100%;
   height: 0.05em;
   height: 2px;
-  /* background-color: var(--bg-col-1); */
   background: #000;
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
@@ -183,8 +317,6 @@ https://css-irl.info/animating-underlines/
   opacity: 1;
   transform: translate3d(0, 0.1em, 0);
 }
-
-
 .animated-link-tag-2 {
   display: block;
   position: relative;
@@ -197,7 +329,6 @@ https://css-irl.info/animating-underlines/
   width: 100%;
   height: 0.05em;
   height: 2px;
-  /* background-color: var(--bg-col-1); */
   background: #000;
   opacity: 0;
   transition: opacity 300ms, transform 200ms;

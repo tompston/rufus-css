@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "concat-css": "cat css/* > rufus.css",
-    "build": "python generate_css_class.py && npm run concat-css"
+    "build": "python3 generate_css_class.py && npm run concat-css"
   },
   "author": "",
   "license": "ISC"
