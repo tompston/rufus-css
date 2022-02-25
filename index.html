@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rufus CSS</title>
     <style type="text/css">
-
       @import url(./css/00_main.css);
       @import url(./css/01_var.css);
       @import url(./css/02_html.css);
@@ -123,6 +122,15 @@
         font-family: var(--font-fam-1);
         font-weight: 500;
         line-height: 0.9;
+      }
+
+      .class_name_header {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 14px;
+      }
+      .class_name_header div {
+        opacity: 0.7;
       }
 
       h3 {
@@ -569,7 +577,10 @@
         </div> -->
 
         <!-- header-x -->
-        <div class="class_name_header">header-x</div>
+        <div class="class_name_header flex gap-6">
+          header-x
+          <div class="fs-9">( font-size + line-height )</div>
+        </div>
         <div class="box_divide class_grid_">
           <!--  -->
           <div class="label_example_grid">
@@ -616,7 +627,10 @@
         </div>
 
         <!-- header-x -->
-        <div class="class_name_header">text-x</div>
+        <div class="class_name_header">
+          text-x
+          <div class="fs-9">( font-size + line-height )</div>
+        </div>
         <div class="box_divide grid gap-50">
           <!--  -->
           <div class="label_example_grid">
@@ -658,6 +672,95 @@
         <!-- md-tables -->
         <!-- md-tables -->
         <div class="md-tables">
+
+
+          <h2 id="classes-dependent-on-root-variables">
+            Classes Dependent on root variables
+          </h2>
+          <table>
+            <thead>
+              <tr>
+                <th>CLASS_NAME</th>
+                <th>CSS_PROPERTY</th>
+                <th>NOTES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>fs-1</td>
+                <td>font-size</td>
+                <td>1-9</td>
+              </tr>
+              <tr>
+                <td>main-col-1</td>
+                <td>background-color</td>
+                <td>1-9</td>
+              </tr>
+
+              <tr>
+                <td>text-col-1</td>
+                <td>color</td>
+                <td>1-9, mapped to main-col-x</td>
+              </tr>
+              <tr>
+                <td>lh-1</td>
+                <td>line-height</td>
+                <td>1-9</td>
+              </tr>
+              <tr>
+                <td>ls-1</td>
+                <td>letter-spacing</td>
+                <td>1-6</td>
+              </tr>
+
+              <tr>
+                <td>font-fam-1</td>
+                <td>font-family</td>
+                <td>1-6</td>
+              </tr>
+              <tr>
+                <td>border-rad-1</td>
+                <td>border-radius</td>
+                <td>1-6</td>
+              </tr>
+              <tr>
+                <td>header-1</td>
+                <td>font-size &amp; line-height</td>
+                <td>1-6, font-size & line-height mapped to root variables</td>
+              </tr>
+              <tr>
+                <td>text-1</td>
+                <td>font-size &amp; line-height</td>
+                <td>1-4, font-size & line-height mapped to root variables</td>
+              </tr>
+
+              <tr>
+                <td>shadow-1</td>
+                <td>box-shadow:</td>
+                <td>1-6</td>
+              </tr>
+              <tr>
+                <td>border-x-x</td>
+                <td>border</td>
+                <td>border-HEIGHT-COLOR (1-2, 1-3)</td>
+              </tr>
+
+              <tr>
+                <td>hr-x-x</td>
+                <td>border, height, background</td>
+                <td>hr-HEIGHT-COLOR (1-2, 1-3)</td>
+              </tr>
+              <tr>
+                <td>transition-1</td>
+                <td>transition:</td>
+                <td>
+                  1-3, used as a helper class so that you can attach them to
+                  existing elements
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
           <h2 id="classes-not-dependent-on-root-variables">
             Classes not dependent on root variables
           </h2>
@@ -765,6 +868,27 @@
                 <td>cursor:pointer;</td>
                 <td></td>
               </tr>
+
+              <tr>
+                <td>hover-pointer</td>
+                <td>cursor: pointer;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>hover-underline</td>
+                <td>text-decoration: underline;</td>
+                <td>Add underline on hover</td>
+              </tr>
+
+
+              <tr>
+                <td>border-box</td>
+                <td>box-sizing: border-box;</td>
+                <td></td>
+              </tr>
+
+
+
               <tr>
                 <td>disable-text-select</td>
                 <td></td>
@@ -806,6 +930,7 @@
               <tr>
                 <td>align-text-vertically</td>
                 <td>display: flex; align-items: center;</td>
+                <td></td>
               </tr>
             </tbody>
           </table>
@@ -893,83 +1018,8 @@
               </tr>
             </tbody>
           </table>
-          <h2 id="classes-dependent-on-root-variables">
-            Classes Dependent on root variables
-          </h2>
-          <table>
-            <thead>
-              <tr>
-                <th>CLASS_NAME</th>
-                <th>CSS_PROPERTY</th>
-                <th>NOTES</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>fs-1</td>
-                <td>font-size</td>
-                <td>1-9</td>
-              </tr>
-              <tr>
-                <td>main-col-1</td>
-                <td>background-color</td>
-                <td>1-9</td>
-              </tr>
-              <tr>
-                <td>font-fam-1</td>
-                <td>font-family</td>
-                <td>1-6</td>
-              </tr>
-              <tr>
-                <td>text-col-1</td>
-                <td>color</td>
-                <td>1-9, mapped to main-col-x</td>
-              </tr>
-              <tr>
-                <td>border-rad-1</td>
-                <td>border-radius</td>
-                <td>1-6</td>
-              </tr>
-              <tr>
-                <td>header-1</td>
-                <td>font-size &amp; line-height</td>
-                <td>1-6, font-size dependent on root varaible</td>
-              </tr>
-              <tr>
-                <td>letter-spacing-1</td>
-                <td>letter-spacing</td>
-                <td>1-6</td>
-              </tr>
-              <tr>
-                <td>shadow-1</td>
-                <td>box-shadow:</td>
-                <td>1-6</td>
-              </tr>
-              <tr>
-                <td>border-x-x</td>
-                <td>border</td>
-                <td>border-HEIGHT-COLOR (1-2, 1-3)</td>
-              </tr>
-              <tr>
-                <td>text-1</td>
-                <td>font-size &amp; line-height</td>
-                <td>1-4, font-size dependent on root varaible</td>
-              </tr>
-              <tr>
-                <td>hr-x-x</td>
-                <td>border, height, background</td>
-                <td>hr-HEIGHT-COLOR (1-2, 1-3)</td>
-              </tr>
-              <tr>
-                <td>transition-1</td>
-                <td>transition:</td>
-                <td>
-                  1-3, used as a helper class so that you can attach them to
-                  existing elements
-                </td>
-              </tr>
-            </tbody>
-          </table>
+
+
         </div>
         <!-- md-tables -->
         <!-- md-tables -->

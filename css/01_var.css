@@ -152,45 +152,48 @@
   box-shadow: var(--shadow-6);
 }
 
-/* Define based on project needs, add font weight and stuff */
+/* line-height +  */
 .header-1 {
   font-size: var(--fs-1);
-  line-height: 1.02;
+  line-height: var(--lh-1);
 }
 .header-2 {
   font-size: var(--fs-2);
-  line-height: 1.02;
+  line-height: var(--lh-2);
 }
 .header-3 {
   font-size: var(--fs-3);
-  line-height: 1.04;
+  line-height: var(--lh-3);
 }
 .header-4 {
   font-size: var(--fs-4);
+  line-height: var(--lh-4);
 }
 .header-5 {
   font-size: var(--fs-5);
+  line-height: var(--lh-5);
 }
 .header-6 {
   font-size: var(--fs-6);
+  line-height: var(--lh-6);
 }
 
 /* text */
 .text-1 {
   font-size: var(--fs-6);
-  line-height: 1.64;
+  line-height: var(--lh-6);
 }
 .text-2 {
   font-size: var(--fs-7);
-  line-height: 1.62;
+  line-height: var(--lh-7);
 }
 .text-3 {
   font-size: var(--fs-8);
-  line-height: 1.67;
+  line-height: var(--lh-8);
 }
 .text-4 {
   font-size: var(--fs-9);
-  line-height: 1.68;
+  line-height: var(--lh-9);
 }
 
 /* transition */
@@ -238,23 +241,23 @@
 }
 
 /* Sizes taken from tw */
-.letter-spacing-1 {
-  letter-spacing: var(--letter-spacing-1);
+.ls-1 {
+  letter-spacing: var(--ls-1);
 }
-.letter-spacing-2 {
-  letter-spacing: var(--letter-spacing-2);
+.ls-2 {
+  letter-spacing: var(--ls-2);
 }
-.letter-spacing-3 {
-  letter-spacing: var(--letter-spacing-3);
+.ls-3 {
+  letter-spacing: var(--ls-3);
 }
-.letter-spacing-4 {
-  letter-spacing: var(--letter-spacing-4);
+.ls-4 {
+  letter-spacing: var(--ls-4);
 }
-.letter-spacing-5 {
-  letter-spacing: var(--letter-spacing-5);
+.ls-5 {
+  letter-spacing: var(--ls-5);
 }
-.letter-spacing-6 {
-  letter-spacing: var(--letter-spacing-6);
+.ls-6 {
+  letter-spacing: var(--ls-6);
 }
 
 /* border */

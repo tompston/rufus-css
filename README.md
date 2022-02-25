@@ -61,6 +61,18 @@ also be triggered and purge the css in the dist folder.
 - The `package.json` example is also written inside the output file, so u don't need to check the repo again.
 
 
+## Purging CSS for Single Page Apps
+
+You don't really need a seperate config file for postcss to purge unused 
+classes for small SPA projects. Just copy the following into your package.json file
+
+```
+  "scripts": {
+    ...
+    "postbuild": "purgecss --css dist/assets/*.css --content dist/assets/*.js -o dist/assets/  --safelist html body"
+  },
+```
+
 <!-- 
 
   "scripts": {
@@ -69,6 +81,11 @@ also be triggered and purge the css in the dist folder.
     "build": "python3 generate_css_class.py && npm run concat-css && npm run postcss:build"
   },
 
+
+--- this allows to add padding without affecting max width (useful for inputs)
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
 
 
  -->
