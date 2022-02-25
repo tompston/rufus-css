@@ -59,3 +59,16 @@ also be triggered and purge the css in the dist folder.
 - note that you need to install purgecss as a dependency, if you're gonna do
   automatic builds for Netlify and stuff
 - The `package.json` example is also written inside the output file, so u don't need to check the repo again.
+
+
+<!-- 
+
+  "scripts": {
+    "concat-css": "cat css/* > rufus.css",
+    "postcss:build": "postcss rufus.css -o rufus.css",
+    "build": "python3 generate_css_class.py && npm run concat-css && npm run postcss:build"
+  },
+
+
+
+ -->

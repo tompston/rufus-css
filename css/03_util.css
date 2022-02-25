@@ -1,89 +1,22 @@
-/* ---- Util classes that are not dependent on root variables */
+/* ---- Classes mapped to  root variables  */
 
-/* -- Resetting inbuilt html stuff */
-ul,
-ol {
-  margin: 0px;
-  padding-left: 33px;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-p,
-pre {
-  margin: 0;
-}
-.disable-text-select,
-button,
-img,
-input::placeholder,
-textarea::placeholder {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-button {
-  outline: inherit;
-  background: none;
-  cursor: pointer;
-  color: inherit;
-  font: inherit;
-  border: none;
-  padding: 0;
-}
-/* disable text select utility class + applied to buttons, images and inputs */
-code,
-.code {
-  font-family: Roboto Mono, Menlo, monospace;
-  background: rgb(243, 243, 243);
-  color: rgb(48, 48, 48);
-  font-size: 14px;
-  padding: 5px 10px;
-  border-radius: 6px;
-}
-.code {
-  max-width: 100%;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-input,
-textarea {
-  font-family: inherit;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-textarea {
-  resize: vertical;
-}
-input:focus,
-textarea:focus {
-  outline: none; /* removes the border on focus for inputs */
-}
-input::placeholder,
-textarea::placeholder {
-  opacity: 1;
-  color: #9ca3af;
-  font-size: 14px;
-}
-a,
-a:hover,
-a:focus,
-a:active {
-  color: inherit;
-}
 /*  */
 .border-box {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+/* buttons */
+.button-1 {
+  width: 114px;
+  height: 42px;
+  font-size: 14px;
+  border: 1px solid rgba(177, 174, 174, 0.5);
+  padding: 12px 15px;
+  /* center content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* flex classes */
@@ -127,7 +60,34 @@ a:active {
   display: grid;
   place-content: center;
 }
-
+/* tw palette */
+.temp-main-col-1 {
+  background-color: #071330;
+}
+.temp-main-col-2 {
+  background-color: #0c4160;
+}
+.temp-main-col-3 {
+  background-color: #738fa7;
+}
+.temp-main-col-4 {
+  background-color: #c3ceda;
+}
+.temp-main-col-5 {
+  background-color: #c3ceda57;
+}
+.temp-main-col-6 {
+  background-color: #e8e8e857;
+}
+.temp-main-col-7 {
+  background-color: #e8e8e83a;
+}
+.temp-main-col-8 {
+  background-color: #e8e8e836;
+}
+.temp-main-col-9 {
+  background-color: #e8e8e828;
+}
 
 /* opacity */
 .op-0 {
@@ -240,7 +200,6 @@ a:active {
   z-index: 50;
 }
 
-
 /* text-side */
 .text-left {
   text-align: left;
@@ -276,10 +235,10 @@ a:active {
   cursor: pointer;
 }
 
-.hover-pointer:hover{
+.hover-pointer:hover {
   cursor: pointer;
 }
-.hover-underline:hover{
+.hover-underline:hover {
   text-decoration: underline;
 }
 
@@ -339,4 +298,69 @@ https://css-irl.info/animating-underlines/
   opacity: 1;
   transform: translate3d(0, 0.2em, 0);
   transform: translate3d(0, 0, 0);
+}
+
+/* rows */
+.gtr-1-1-1-1 {
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.gtr-1-1-1 {
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.gtr-1-1 {
+  grid-template-rows: 1fr 1fr;
+}
+.gtr-1 {
+  grid-template-rows: 1fr;
+}
+
+/* rows - 1fr & auto  */
+.gtr-1-auto {
+  grid-template-rows: 1fr auto;
+}
+.gtr-auto-1 {
+  grid-template-rows: auto 1fr;
+}
+
+/* rows - auto */
+.gtr-auto-auto-auto {
+  grid-template-rows: auto auto auto;
+}
+.gtr-auto-auto {
+  grid-template-rows: auto auto;
+}
+.gtr-auto {
+  grid-template-rows: auto;
+}
+
+/* grid template columns */
+.gtc-1-1-1-1 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.gtc-1-1-1 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.gtc-1-1 {
+  grid-template-columns: 1fr 1fr;
+}
+.gtc-1 {
+  grid-template-columns: 1fr;
+}
+/* 1fr & auto  */
+.gtc-1-auto {
+  grid-template-columns: 1fr auto;
+}
+.gtc-auto-1 {
+  grid-template-columns: auto 1fr;
+}
+
+/* auto */
+.gtc-auto-auto {
+  grid-template-columns: auto auto auto;
+}
+.gtc-auto-auto {
+  grid-template-columns: auto auto;
+}
+.gtc-auto {
+  grid-template-columns: auto;
 }

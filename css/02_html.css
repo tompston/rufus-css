@@ -1,0 +1,114 @@
+/* Changing predefined html properties */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* make the scrollbar not take up the total space of the page, 
+    so that there is no shift once it appears / dissapears */
+  overflow-y: scroll;
+  cursor: default;
+}
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+}
+::selection {
+  color: var(--selection-text-col);
+  background-color: var(--selection-main-col);
+}
+
+/* remove the init font size for h tags so that easily can change divs into h tags */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: unset;
+}
+
+ul,
+ol {
+  margin: 0px;
+  padding-left: 33px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0;
+}
+
+/* disable text select utility class + applied to buttons, images and inputs */
+.disable-text-select,
+button,
+img,
+input::placeholder,
+textarea::placeholder {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+button {
+  outline: inherit;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  border: none;
+  padding: 0;
+}
+
+code,
+.code {
+  font-family: Roboto Mono, Menlo, monospace;
+  background: rgb(243, 243, 243);
+  color: rgb(48, 48, 48);
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+.code {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input,
+textarea {
+  font-family: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+textarea {
+  resize: vertical;
+}
+input:focus,
+textarea:focus {
+  outline: none; /* removes the border on focus for inputs */
+}
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+  font-size: 14px;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+}
