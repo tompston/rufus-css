@@ -124,6 +124,14 @@
 
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
+-- flex-center classes 
+
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 */
 
 @media screen and (max-width: 1410px) {
@@ -187,23 +195,6 @@ body {
     helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 }
 
-/* disable text select utility class + applied to buttons, images and inputs */
-.disable-text-select,
-button,
-img,
-input::placeholder,
-textarea::placeholder {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-/* flex-center class */
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 /*  Minified content starts here */
 /*  https://cssminifier.org/ */

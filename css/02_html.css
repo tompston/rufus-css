@@ -5,7 +5,6 @@
   background-color: var(--selection-main-col);
 }
 
-/* remove the init font size for h tags so that easily can change divs into h tags */
 h1,
 h2,
 h3,
@@ -103,4 +102,15 @@ a:hover,
 a:focus,
 a:active {
   color: inherit;
+}
+/* disable text select utility class + applied to buttons, images and inputs */
+.disable-text-select,
+button,
+img,
+input::placeholder,
+textarea::placeholder {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
 }
