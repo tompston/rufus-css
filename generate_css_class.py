@@ -30,8 +30,8 @@ css = {
     ],
     "gap": [
         ['gap', 'gap'],
-        ['gap-h', 'row-gap'],
-        ['gap-w', 'column-gap'],
+        # ['gap-h', 'row-gap'],
+        # ['gap-w', 'column-gap'],
     ],
     "height": [
         ['h', 'height'],

@@ -1,22 +1,5 @@
 /* Changing predefined html properties */
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-  -webkit-text-size-adjust: 100%;
-  /* make the scrollbar not take up the total space of the page, 
-    so that there is no shift once it appears / dissapears */
-  overflow-y: scroll;
-  cursor: default;
-}
-body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
-    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
-}
+
 ::selection {
   color: var(--selection-text-col);
   background-color: var(--selection-main-col);
@@ -28,8 +11,12 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-size: unset;
+h6,
+h7,
+h8,
+h9 {
+  /* font-size: unset; */
+  font-weight: unset;
 }
 
 ul,
@@ -49,17 +36,6 @@ pre {
   margin: 0;
 }
 
-/* disable text select utility class + applied to buttons, images and inputs */
-.disable-text-select,
-button,
-img,
-input::placeholder,
-textarea::placeholder {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  user-select: none;
-}
 button {
   outline: inherit;
   background: none;
@@ -68,6 +44,22 @@ button {
   font: inherit;
   border: none;
   padding: 0;
+}
+
+/* All credits go to tailwind --> https://tailwindcss.com/docs/font-family 
+Straight up copy of tailwind classes
+*/
+.font-sans {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
 code,
@@ -104,7 +96,7 @@ input::placeholder,
 textarea::placeholder {
   opacity: 1;
   color: #9ca3af;
-  font-size: 14px;
+  font-size: 15px;
 }
 a,
 a:hover,

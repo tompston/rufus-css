@@ -67,7 +67,7 @@
       }
 
       th {
-        background: rgb(41, 41, 41);
+        background: rgb(20, 20, 20);
         color: rgb(255, 255, 255);
         /* font-weight: 500; */
         font-family: Roboto Mono, Menlo, monospace;
@@ -84,6 +84,8 @@
       }
       tr:nth-child(odd) {
         background-color: #ffffff;
+      }
+      .gh-svg {
       }
       .code_box {
         background-color: #f5f5f5c0;
@@ -112,15 +114,14 @@
         font-size: var(--fs-8);
       }
 
-      h1,
+      /* h1,
       h3,
-      h2,
+      h2, */
       .class_name_header {
         font-size: var(--fs-4);
-        margin-bottom: 10px;
-        /* margin-bottom: 0px; */
+        margin-bottom: 14px;
         font-family: var(--font-fam-1);
-        font-weight: 500;
+        font-weight: 600;
         line-height: 0.9;
       }
 
@@ -176,6 +177,14 @@
         font-size: var(--fs-6);
       }
 
+      /* .summary--content li p{
+        font-weight: 600;
+      } */
+
+      .summary--content-header {
+        font-weight: 600;
+      }
+
       @media screen and (max-width: 800px) {
         .label_example_grid {
           grid-template-rows: auto auto;
@@ -200,10 +209,72 @@
       <div class="max-width-1 mb-94">
         <!--  -->
         <div class="top_content">
-          <div class="my-140">
-            <div class="fs-1 text-center">Rufus CSS</div>
+          <div class="my-120">
+            <div class="fs-1 text-center fw-600">Rufus CSS</div>
             <div class="text-center header-5">
               Self-defined, utility-first, Tailwind-inspired CSS library.
+            </div>
+            <div class="flex-center mt-30">
+              <a
+              href="https://github.com/tompston/rufus-css"
+              rel="noreferrer"
+              target="_blank"
+              "
+              >
+                <svg
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="45.549px"
+                  height="45.549px"
+                  viewBox="0 0 438.549 438.549"
+                  style="enable-background: new 0 0 438.549 438.549"
+                  xml:space="preserve"
+                  class="gh-svg"
+                >
+                  <g>
+                    <path
+                      d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
+  c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63
+  c0,47.78,13.94,90.745,41.827,128.906c27.884,38.164,63.906,64.572,108.063,79.227c5.14,0.954,8.945,0.283,11.419-1.996
+  c2.475-2.282,3.711-5.14,3.711-8.562c0-0.571-0.049-5.708-0.144-15.417c-0.098-9.709-0.144-18.179-0.144-25.406l-6.567,1.136
+  c-4.187,0.767-9.469,1.092-15.846,1c-6.374-0.089-12.991-0.757-19.842-1.999c-6.854-1.231-13.229-4.086-19.13-8.559
+  c-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559
+  c-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-0.951-2.568-2.098-3.711-3.429c-1.142-1.331-1.997-2.663-2.568-3.997
+  c-0.572-1.335-0.098-2.43,1.427-3.289c1.525-0.859,4.281-1.276,8.28-1.276l5.708,0.853c3.807,0.763,8.516,3.042,14.133,6.851
+  c5.614,3.806,10.229,8.754,13.846,14.842c4.38,7.806,9.657,13.754,15.846,17.847c6.184,4.093,12.419,6.136,18.699,6.136
+  c6.28,0,11.704-0.476,16.274-1.423c4.565-0.952,8.848-2.383,12.847-4.285c1.713-12.758,6.377-22.559,13.988-29.41
+  c-10.848-1.14-20.601-2.857-29.264-5.14c-8.658-2.286-17.605-5.996-26.835-11.14c-9.235-5.137-16.896-11.516-22.985-19.126
+  c-6.09-7.614-11.088-17.61-14.987-29.979c-3.901-12.374-5.852-26.648-5.852-42.826c0-23.035,7.52-42.637,22.557-58.817
+  c-7.044-17.318-6.379-36.732,1.997-58.24c5.52-1.715,13.706-0.428,24.554,3.853c10.85,4.283,18.794,7.952,23.84,10.994
+  c5.046,3.041,9.089,5.618,12.135,7.708c17.705-4.947,35.976-7.421,54.818-7.421s37.117,2.474,54.823,7.421l10.849-6.849
+  c7.419-4.57,16.18-8.758,26.262-12.565c10.088-3.805,17.802-4.853,23.134-3.138c8.562,21.509,9.325,40.922,2.279,58.24
+  c15.036,16.18,22.559,35.787,22.559,58.817c0,16.178-1.958,30.497-5.853,42.966c-3.9,12.471-8.941,22.457-15.125,29.979
+  c-6.191,7.521-13.901,13.85-23.131,18.986c-9.232,5.14-18.182,8.85-26.84,11.136c-8.662,2.286-18.415,4.004-29.263,5.146
+  c9.894,8.562,14.842,22.077,14.842,40.539v60.237c0,3.422,1.19,6.279,3.572,8.562c2.379,2.279,6.136,2.95,11.276,1.995
+  c44.163-14.653,80.185-41.062,108.068-79.226c27.88-38.161,41.825-81.126,41.825-128.906
+  C438.536,184.851,428.728,148.168,409.132,114.573z"
+                    />
+                  </g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g></svg
+              ></a>
             </div>
           </div>
 
@@ -252,31 +323,29 @@
                 <span class="ml-6">Goals</span>
               </summary>
 
-              <!-- Goals  -->
-              <!-- Goals  -->
-              <!-- Goals  -->
-              <!-- Goals  -->
-              <ol class="text-2">
+
+              <ol class="text-3 font-mono summary--content">
                 <li>
-                  Root variables are meant to be tweaked for personal / project
-                  needs
+                  <p class="summary--content-header">Root variables are meant to be tweaked for personal / project
+                  needs</p>
+                  
                 </li>
                 <li>
-                  <p>
+                  <p class="summary--content-header">
                     The name of the root variable is the same as the class name
                   </p>
                   <ul>
-                    <li>--font-fam-1 variable is font-fam-1 class</li>
+                    <li>--font-fam-1 variable is mapped to font-fam-1 class</li>
                   </ul>
                 </li>
                 <li>
-                  <p>Collection of 2 types of classes</p>
+                  <p class="summary--content-header">Collection of 2 types of classes</p>
                   <ul>
-                    <li>
+                    <li >
                       predefined classes for css properties that change based on
                       the project ( like
                       <code
-                        >font-family, font-size, background-color, color,
+                        >font-family, font-size, background-color, 
                         shadow</code
                       >
                       )
@@ -289,7 +358,7 @@
                   </ul>
                 </li>
                 <li>
-                  <p>
+                  <p class="summary--content-header">
                     predictable names ( increments ) for classes that deal with
                     sizing
                   </p>
@@ -298,8 +367,9 @@
                     <li>m-345 means <code>margin: 345px;</code></li>
                   </ul>
                 </li>
-                <li>
-                  Setup is easy, as everything is contained in a single css file
+                <li >
+                  <span class="summary--content-header">Setup is easy, as everything is contained in a single css file</span>
+                  
                   <ul>
                     <li>
                       Minimal setup applies only if you don&#39;t need new css
@@ -309,7 +379,7 @@
                   </ul>
                 </li>
                 <li>
-                  <p>
+                  <p class="summary--content-header">
                     Encourages a more maintainable design system, as the root
                     variables can hold the values that will be used in the
                     project
@@ -326,21 +396,20 @@
                   </ul>
                 </li>
                 <li>
-                  <p>
+                  <p class="summary--content-header">
                     Remove some of the predefined html css properties for
                     browsers.
                   </p>
                 </li>
                 <li>
-                  <p>
-                    The goal is not to stop writing css. The goal is to write
-                    css when you need
+                  <p class="summary--content-header">
+                    The goal is not to stop writing css. The goal is to add shortcuts that reduce the amount of css that needs to be written in the project
                   </p>
-                  <ul>
+                  <!-- <ul>
                     <li>to specify things that are used relativley rarely</li>
                     <li>media queries</li>
                     <li>classes that apply to a group of elements</li>
-                  </ul>
+                  </ul> -->
                 </li>
               </ol>
               <!-- Goals  -->
@@ -351,20 +420,23 @@
           </div>
         </div>
 
+        <!-- <h1 class="fs-1-- example_grid">
+          The quick brown fox jumps over the lazy dog
+        </h1> -->
+
         <div class="pt-20"></div>
 
-        <div class="header-4 mb-14">
-          <!-- Preview for some of the root variable predefined classes -->
-        </div>
+        <!-- <div class="header-4 mb-14"></div> -->
+
         <!-- header-x -->
         <div class="class_name_header">fs-x</div>
         <div class="box_divide grid gap-50">
           <!--  -->
           <div class="label_example_grid">
             <div class="label_grid label_text">fs-1</div>
-            <div class="fs-1 example_grid">
+            <h1 class="fs-1-- example_grid">
               The quick brown fox jumps over the lazy dog
-            </div>
+            </h1>
           </div>
           <!--  -->
           <div class="label_example_grid">
@@ -417,6 +489,12 @@
           <div class="label_example_grid">
             <div class="label_grid label_text">fs-9</div>
             <div class="fs-9 example_grid">
+              The quick brown fox jumps over the lazy dog
+            </div>
+          </div>
+          <div class="label_example_grid">
+            <div class="label_grid label_text">fs-10</div>
+            <div class="fs-10 example_grid">
               The quick brown fox jumps over the lazy dog
             </div>
           </div>
@@ -570,11 +648,7 @@
           </div>
         </div>
 
-        <!-- button-x -->
-        <!-- <div class="class_name_header">button-x</div>
-        <div class="box_divide flex gap-20">
-          <button class="button button-1 transition-1">button-1</button>
-        </div> -->
+
 
         <!-- header-x -->
         <div class="class_name_header flex gap-6">
@@ -626,13 +700,14 @@
           </div>
         </div>
 
+
+
         <!-- header-x -->
         <div class="class_name_header">
           text-x
           <div class="fs-9">( font-size + line-height )</div>
         </div>
         <div class="box_divide grid gap-50">
-          <!--  -->
           <div class="label_example_grid">
             <div class="label_grid label_text">text-1</div>
             <div class="text-1 example_grid">
@@ -641,7 +716,6 @@
               esse facere ipsam ratione
             </div>
           </div>
-          <!--  -->
           <div class="label_example_grid">
             <div class="label_grid label_text">text-2</div>
             <div class="text-2 example_grid">
@@ -650,7 +724,6 @@
               esse facere ipsam ratione
             </div>
           </div>
-          <!--  -->
           <div class="label_example_grid">
             <div class="label_grid label_text">text-3</div>
             <div class="text-3 example_grid">
@@ -659,7 +732,6 @@
               esse facere ipsam ratione
             </div>
           </div>
-          <!--  -->
           <div class="label_example_grid">
             <div class="label_grid label_text">text-4</div>
             <div class="text-4 example_grid">
@@ -669,14 +741,57 @@
             </div>
           </div>
         </div>
+
+          <!-- 
+                  <div class="class_name_header">border-x-x</div>
+        <div class="grid color_grid gap-10">
+          <div class="bg_color_box border-1-1 font-sans ">font-sans</div>
+          <div class="bg_color_box border-1-1 font-serif">font-serif</div>
+          <div class="bg_color_box border-1-1 font-mono">font-mono</div>
+          <div class="bg_color_box border-1-1 font-code">font-code</div>
+        </div>
+         -->
+        <div class="class_name_header">
+          text-x
+          <div class="fs-9">( copied from tailwind )</div>
+        </div>
+        <div class="box_divide grid gap-50">
+          <div class="label_example_grid">
+            <div class="label_grid label_text">font-sans</div>
+            <div class="text-2 font-sans">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
+              esse facere ipsam ratione
+            </div>
+          </div>
+          <div class="label_example_grid">
+            <div class="label_grid label_text">font-serif</div>
+            <div class="text-2 font-serif">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
+              esse facere ipsam ratione
+            </div>
+          </div>
+          <div class="label_example_grid">
+            <div class="label_grid label_text">font-mono</div>
+            <div class="text-2 font-mono">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              ipsum sequi iure assumenda nobis modi explicabo? Ullam molestias,
+              esse facere ipsam ratione
+            </div>
+          </div>
+        </div>
+
+
+
+
         <!-- md-tables -->
         <!-- md-tables -->
         <div class="md-tables">
-
-
-          <h2 id="classes-dependent-on-root-variables">
+          <!-- <h2 id="classes-dependent-on-root-variables"></h2> -->
+          <div class="class_name_header">
             Classes Dependent on root variables
-          </h2>
+          </div>
           <table>
             <thead>
               <tr>
@@ -689,12 +804,21 @@
               <tr>
                 <td>fs-1</td>
                 <td>font-size</td>
-                <td>1-9</td>
+                <td>1-10</td>
               </tr>
               <tr>
                 <td>main-col-1</td>
                 <td>background-color</td>
                 <td>1-9</td>
+              </tr>
+
+              <tr>
+                <td>temp-main-col-1</td>
+                <td>background-color</td>
+                <td>
+                  used when you don't have any colors defined for the root
+                  variables. (1-9)
+                </td>
               </tr>
 
               <tr>
@@ -761,9 +885,10 @@
             </tbody>
           </table>
 
-          <h2 id="classes-not-dependent-on-root-variables">
+          <!-- <h2 id="classes-not-dependent-on-root-variables"></h2> -->
+          <div class="class_name_header">
             Classes not dependent on root variables
-          </h2>
+          </div>
           <table>
             <thead>
               <tr>
@@ -880,14 +1005,11 @@
                 <td>Add underline on hover</td>
               </tr>
 
-
               <tr>
                 <td>border-box</td>
                 <td>box-sizing: border-box;</td>
                 <td></td>
               </tr>
-
-
 
               <tr>
                 <td>disable-text-select</td>
@@ -914,14 +1036,7 @@
                 <td>z-index</td>
                 <td>z-10, z-20, z-30, z-40 ,z-50</td>
               </tr>
-              <tr>
-                <td>temp-main-col-1</td>
-                <td></td>
-                <td>
-                  used when you don&#39;t have any colors defined for the root
-                  variables. (1-9)
-                </td>
-              </tr>
+
               <tr>
                 <td>remove-decorations</td>
                 <td>text-decoration: none;</td>
@@ -934,9 +1049,13 @@
               </tr>
             </tbody>
           </table>
-          <h2 id="classes-generated-from-python-script">
+
+          <!-- <h2 id="classes-generated-from-python-script">
             Classes generated from python script
-          </h2>
+          </h2> -->
+          <div class="class_name_header mb-0">
+            Classes generated from python script
+          </div>
           <ul>
             <li>0-100, increment by 2px</li>
             <li>100-400, increment by 5px</li>
@@ -956,7 +1075,7 @@
                 <td>gap</td>
                 <td></td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td>gap-h-0</td>
                 <td>row-gap</td>
                 <td></td>
@@ -965,7 +1084,7 @@
                 <td>gap-w-0</td>
                 <td>column-gap</td>
                 <td></td>
-              </tr>
+              </tr> -->
               <tr>
                 <td>h-0</td>
                 <td>height</td>
@@ -1018,8 +1137,6 @@
               </tr>
             </tbody>
           </table>
-
-
         </div>
         <!-- md-tables -->
         <!-- md-tables -->

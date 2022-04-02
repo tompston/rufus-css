@@ -5,6 +5,9 @@
 .max-width-2 {
   width: var(--max-width-2);
 }
+.max-width-3 {
+  width: var(--max-width-3);
+}
 
 /* background-color */
 .main-col-1 {
@@ -33,6 +36,35 @@
 }
 .main-col-9 {
   background-color: var(--main-col-9);
+}
+
+/* tw palette */
+.temp-main-col-1 {
+  background-color: var(--temp-main-col-1);
+}
+.temp-main-col-2 {
+  background-color: var(--temp-main-col-2);
+}
+.temp-main-col-3 {
+  background-color: var(--temp-main-col-3);
+}
+.temp-main-col-4 {
+  background-color: var(--temp-main-col-4);
+}
+.temp-main-col-5 {
+  background-color: var(--temp-main-col-5);
+}
+.temp-main-col-6 {
+  background-color: var(--temp-main-col-6);
+}
+.temp-main-col-7 {
+  background-color: var(--temp-main-col-7);
+}
+.temp-main-col-8 {
+  background-color: var(--temp-main-col-8);
+}
+.temp-main-col-9 {
+  background-color: var(--temp-main-col-9);
 }
 
 /* bord-rad */
@@ -104,32 +136,44 @@
 }
 
 /* font-size */
-.fs-1 {
+.fs-1,
+h1 {
   font-size: var(--fs-1);
 }
-.fs-2 {
+.fs-2,
+h2 {
   font-size: var(--fs-2);
 }
-.fs-3 {
+.fs-3,
+h3 {
   font-size: var(--fs-3);
 }
-.fs-4 {
+.fs-4,
+h4 {
   font-size: var(--fs-4);
 }
-.fs-5 {
+.fs-5,
+h5 {
   font-size: var(--fs-5);
 }
-.fs-6 {
+.fs-6,
+h6 {
   font-size: var(--fs-6);
 }
-.fs-7 {
+.fs-7,
+h7 {
   font-size: var(--fs-7);
 }
-.fs-8 {
+.fs-8,
+h8 {
   font-size: var(--fs-8);
 }
-.fs-9 {
+.fs-9,
+h9 {
   font-size: var(--fs-9);
+}
+.fs-10 {
+  font-size: var(--fs-10);
 }
 
 /* shadows taken from here, a lot of examples to choose from https://getcssscan.com/css-box-shadow-examples */

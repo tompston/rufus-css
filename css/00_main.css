@@ -2,8 +2,9 @@
 
 :root {
   /* max-width for the main content, check comments to see example snippet */
-  --max-width-1: 1105px;
+  --max-width-1: 1325px;
   --max-width-2: 905px;
+  --max-width-2: 405px;
 
   /* font-family */
   --font-fam-1: sans-serif;
@@ -24,6 +25,17 @@
   --main-col-8: #ffffff;
   --main-col-9: #ffffff;
 
+  /* define the color palette */
+  --temp-main-col-1: #071330;
+  --temp-main-col-2: #0c4160;
+  --temp-main-col-3: #738fa7;
+  --temp-main-col-4: #c3ceda;
+  --temp-main-col-5: #c3ceda57;
+  --temp-main-col-6: #e8e8e857;
+  --temp-main-col-7: #e8e8e83a;
+  --temp-main-col-8: #e8e8e836;
+  --temp-main-col-9: #e8e8e828;
+
   /* font-size */
   --fs-1: 78px;
   --fs-2: 64px;
@@ -34,6 +46,7 @@
   --fs-7: 18px;
   --fs-8: 15px;
   --fs-9: 14px;
+  --fs-10: 10px;
 
   /* border-radius */
   --border-rad-1: 18px;
@@ -94,28 +107,29 @@
 
 /* 
 
---- Centering content + full width backgrounds in html
+-- Centering content + full width backgrounds in html
+    
+  <div class="flex-center">
+      <div class="max-width-1">content</div>
+  </div>
 
-    <div class="flex-center">
-        <div class="max-width-1">content</div>
-    </div>
-
---- importing fonts example
+-- importing fonts example
 
   @font-face {
     font-family: "Poppins-Bold";
     src: url(../fonts/Poppins-Bold.ttf);
   }
 
---- Automatic grid example
+-- Automatic grid example
 
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
 */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1410px) {
   .max-width-1,
-  .max-width-2 {
+  .max-width-2,
+  .max-width-3 {
     padding: 0px 40px;
   }
 }
@@ -133,7 +147,8 @@
     --fs-9: 14px;
   }
   .max-width-1,
-  .max-width-2 {
+  .max-width-2,
+  .max-width-3 {
     padding: 0px 20px;
   }
 }
@@ -150,6 +165,44 @@
     --fs-8: 15px;
     --fs-9: 14px;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* make the scrollbar not take up the total space of the page, 
+    so that there is no shift once it appears / dissapears */
+  overflow-y: scroll;
+  cursor: default;
+}
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+}
+
+/* disable text select utility class + applied to buttons, images and inputs */
+.disable-text-select,
+button,
+img,
+input::placeholder,
+textarea::placeholder {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+/* flex-center class */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*  Minified content starts here */
