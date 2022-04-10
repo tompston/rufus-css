@@ -352,3 +352,16 @@ h9 {
 .border-2-3 {
   border: var(--border-2-3);
 }
+
+.main-col-danger-bg {
+  background: var(--main-col-danger-bg);
+}
+.main-col-danger-txt {
+  color: var(--main-col-danger-txt);
+}
+.main-col-success-bg {
+  background: var(--main-col-success-bg);
+}
+.main-col-success-txt {
+  color: var(--main-col-success-txt);
+}

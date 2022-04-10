@@ -1,12 +1,12 @@
 /*  https://tompston.github.io/rufus-css/   */
 
 :root {
-  /* max-width for the main content, check comments to see example snippet */
+  /* max-width for the main content, check comments below :root blocj to see example snippet */
   --max-width-1: 1325px;
   --max-width-2: 905px;
   --max-width-2: 405px;
 
-  /* font-family */
+  /* font-family, used when  custom fonts imported */
   --font-fam-1: sans-serif;
   --font-fam-2: sans-serif;
   --font-fam-3: sans-serif;
@@ -14,7 +14,7 @@
   --font-fam-5: sans-serif;
   --font-fam-6: sans-serif;
 
-  /* define the color palette */
+  /* define the color palette ( mapped to main-col-x and text-col-x ) */
   --main-col-1: #000000;
   --main-col-2: #ffffff;
   --main-col-3: #ffffff;
@@ -24,6 +24,10 @@
   --main-col-7: #ffffff;
   --main-col-8: #ffffff;
   --main-col-9: #ffffff;
+
+  /* global colors attached to body */
+  --global-bg-col: white;
+  --global-txt-col: black;
 
   /* define the color palette */
   --temp-main-col-1: #071330;
@@ -101,8 +105,19 @@
   --ls-5: -0.025em;
   --ls-6: -0.05em;
 
+  /* cursor selection colors */
   --selection-main-col: rgba(126, 167, 243, 0.65);
   --selection-text-col: rgb(255, 255, 255);
+
+  /* colors associated with states */
+  --main-col-danger-bg: rgb(225, 86, 86);
+  --main-col-danger-txt: red;
+  --main-col-success-bg: rgb(111, 225, 86);
+  --main-col-success-txt: rgb(41, 147, 62);
+
+  /* -- fonts */
+  --font-fam-init: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 }
 
 /* 
@@ -124,7 +139,7 @@
 
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
--- flex-center classes 
+-- flex-center class
 
   .flex-center {
     display: flex;
@@ -133,6 +148,30 @@
   }
 
 */
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* make the scrollbar not take up the total space of the page, so that there is no shift once it appears / dissapears */
+  overflow-y: scroll;
+  cursor: default;
+}
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-fam-init);
+  background: var(--global-bg-col);
+  color: var(--global-txt-col);
+}
+button:disabled,
+button[disabled] {
+  opacity: 0.6;
+}
 
 @media screen and (max-width: 1410px) {
   .max-width-1,
@@ -174,27 +213,6 @@
     --fs-9: 14px;
   }
 }
-
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-  -webkit-text-size-adjust: 100%;
-  /* make the scrollbar not take up the total space of the page, 
-    so that there is no shift once it appears / dissapears */
-  overflow-y: scroll;
-  cursor: default;
-}
-body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
-    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
-}
-
 
 /*  Minified content starts here */
 /*  https://cssminifier.org/ */
