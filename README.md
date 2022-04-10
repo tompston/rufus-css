@@ -2,7 +2,7 @@
 
 Self-defined, utility-first, Tailwind-inspired CSS library.
 
-### [Link to documentation](https://tompston.github.io/rufus-css/)
+### [Link to docs](https://rufus.pages.dev/)
 
 ## Why?
 
@@ -18,6 +18,7 @@ curl https://raw.githubusercontent.com/tompston/rufus-css/main/rufus.css -O rufu
 wget https://raw.githubusercontent.com/tompston/rufus-css/main/rufus.css
 ```
 
+<!--
 ## Goals
 
 1. Root variables are meant to be tweaked for personal / project needs
@@ -63,7 +64,7 @@ also be triggered and purge the css in the dist folder.
 
 ## Purging CSS for Single Page Apps
 
-You don't really need a seperate config file for postcss to purge unused 
+You don't really need a seperate config file for postcss to purge unused
 classes for small SPA projects. Just copy the following into your package.json file
 
 ```
@@ -71,9 +72,9 @@ classes for small SPA projects. Just copy the following into your package.json f
     ...
     "postbuild": "purgecss --css dist/assets/*.css --content dist/assets/*.js -o dist/assets/  --safelist html body"
   },
-```
+``` -->
 
-<!-- 
+<!--
 
   "scripts": {
     "concat-css": "cat css/* > rufus.css",
@@ -83,9 +84,9 @@ classes for small SPA projects. Just copy the following into your package.json f
 
 
 --- this allows to add padding without affecting max width (useful for inputs)
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box; 
-     box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
 
 
  -->
