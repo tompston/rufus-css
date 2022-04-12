@@ -205,51 +205,6 @@
 }
 
 /* credits https://css-irl.info/animating-underlines/ */
-/* Animated link tag 1 */
-.animated-link-tag-1 {
-  display: block;
-  position: relative;
-}
-.animated-link-tag-1::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.05em;
-  height: 2px;
-  background: #000;
-  opacity: 0;
-  transition: opacity 300ms, transform 300ms;
-}
-.animated-link-tag-1:hover::after,
-.animated-link-tag-1:focus::after {
-  opacity: 1;
-  transform: translate3d(0, 0.1em, 0);
-}
-.animated-link-tag-2 {
-  display: block;
-  position: relative;
-}
-.animated-link-tag-2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.05em;
-  height: 2px;
-  background: #000;
-  opacity: 0;
-  transition: opacity 300ms, transform 200ms;
-  transform: translate3d(-50%, 0, 0);
-}
-.animated-link-tag-2:hover::after,
-.animated-link-tag-2:focus::after {
-  opacity: 1;
-  transform: translate3d(0, 0.2em, 0);
-  transform: translate3d(0, 0, 0);
-}
 
 .hover-pointer:hover {
   cursor: pointer;
@@ -387,4 +342,21 @@
 }
 .min-h-full {
   min-height: 100% !important;
+}
+/*  */
+
+.pos-static {
+  position: static;
+}
+.pos-fixed {
+  position: fixed;
+}
+.pos-absolute {
+  position: absolute;
+}
+.pos-relative {
+  position: relative;
+}
+.pos-sticky {
+  position: sticky;
 }

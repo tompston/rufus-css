@@ -88,7 +88,7 @@ for file_name, key_value in css.items():
 
             for value_range in class_value_range:
                 for x in range(value_range[0], value_range[1], value_range[2]):
-                    single_css_class = f".{class_name}-{x}{{{css_property} : {x}{css_unit}; {css_property_2} : {x}{css_unit};}}"
+                    single_css_class = f".{class_name}-{x}{{{css_property}:{x}{css_unit};{css_property_2}:{x}{css_unit};}}"
                     file_object.write(single_css_class)
 
         else:

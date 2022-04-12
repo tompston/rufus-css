@@ -56,9 +56,16 @@ Straight up copy of tailwind classes
 .font-serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
-.font-mono {
+.font-code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
+}
+.font-helvetica {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.font-monospace {
+  font-family: monospace;
 }
 
 code,
@@ -67,7 +74,7 @@ code,
   background: rgb(243, 243, 243);
   color: rgb(48, 48, 48);
   font-size: 14px;
-  padding: 5px 8px;
+  padding: 4px 8px;
   border-radius: 6px;
 }
 .code {
