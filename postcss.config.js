@@ -3,11 +3,10 @@ module.exports = {
     // require("postcss-import"),
     // require("postcss-preset-env"),
     // require("autoprefixer"),
-    // require("cssnano"),
-    // require("stylelint")
-    // require("cssnano")({
-    //   preset: "default",
-    //   discardComments: false,
-    // }),
+    // require("stylelint"),
+    require("cssnano")({
+      preset: "default",
+      discardComments: true,
+    }),
   ],
 };

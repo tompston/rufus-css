@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "concat-css": "cat css/* > rufus.css",
-    "postcss:build": "postcss rufus.css -o rufus.css",
-    "build-postcss": "python3 generate_css_class.py && npm run concat-css && npm run postcss:build",
-    "build": "python3 generate_css_class.py && npm run concat-css"
+    "concat-base": "cat css/base.txt > ./dist/rufus.css",
+    "concat-content": "cat css/*.css > ./dist/rufus-content.css",
+    "postcss:build": "postcss ./dist/rufus-content.css -o ./dist/rufus-content.css",
+    "build-postcss": "python3 gen.py && npm run concat-content && npm run postcss:build",
+    "build": "python3 gen.py && npm run concat-content && npm run concat-base && npm run postcss:build "
   },
   "author": "",
   "license": "ISC",

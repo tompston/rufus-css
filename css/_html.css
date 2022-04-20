@@ -45,9 +45,7 @@ button {
   padding: 0;
 }
 
-/* All credits go to tailwind --> https://tailwindcss.com/docs/font-family 
-Straight up copy of tailwind classes
-*/
+/* All credits go to tailwind --> https://tailwindcss.com/docs/font-family  Straight up copy of tailwind classes */
 .font-sans {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -61,8 +59,7 @@ Straight up copy of tailwind classes
     "Liberation Mono", "Courier New", monospace;
 }
 .font-helvetica {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 .font-monospace {
   font-family: monospace;

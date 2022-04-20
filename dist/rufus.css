@@ -1,0 +1,217 @@
+/*  https://tompston.github.io/rufus-css/   */
+
+:root {
+  /* max-width for the main content, check comments below :root blocj to see example snippet */
+  --max-width-1: 1325px;
+  --max-width-2: 905px;
+  --max-width-3: 405px;
+
+  /* font-family, used when  custom fonts imported */
+  --font-fam-1: sans-serif;
+  --font-fam-2: sans-serif;
+  --font-fam-3: sans-serif;
+  --font-fam-4: sans-serif;
+  --font-fam-5: sans-serif;
+  --font-fam-6: sans-serif;
+
+  /* define the color palette ( mapped to main-col-x and text-col-x ) */
+  --main-col-1: #000000;
+  --main-col-2: #ffffff;
+  --main-col-3: #ffffff;
+  --main-col-4: #ffffff;
+  --main-col-5: #ffffff;
+  --main-col-6: #ffffff;
+  --main-col-7: #ffffff;
+  --main-col-8: #ffffff;
+  --main-col-9: #ffffff;
+
+  /* global colors attached to body */
+  --global-bg-col: white;
+  --global-txt-col: black;
+
+  /* define the color palette */
+  --temp-main-col-1: #071330;
+  --temp-main-col-2: #0c4160;
+  --temp-main-col-3: #738fa7;
+  --temp-main-col-4: #c3ceda;
+  --temp-main-col-5: #c3ceda57;
+  --temp-main-col-6: #e8e8e857;
+  --temp-main-col-7: #e8e8e83a;
+  --temp-main-col-8: #e8e8e836;
+  --temp-main-col-9: #e8e8e828;
+
+  /* font-size */
+  --fs-1: 78px;
+  --fs-2: 64px;
+  --fs-3: 44px;
+  --fs-4: 30px;
+  --fs-5: 22px;
+  --fs-6: 20px;
+  --fs-7: 18px;
+  --fs-8: 15px;
+  --fs-9: 14px;
+  --fs-10: 10px;
+
+  /* border-radius */
+  --border-rad-1: 18px;
+  --border-rad-2: 14px;
+  --border-rad-3: 10px;
+  --border-rad-4: 7px;
+  --border-rad-5: 5px;
+  --border-rad-6: 0px;
+
+  /* hr color  */
+  --hr-col-1: rgba(29, 29, 29, 0.4);
+  --hr-col-2: rgba(29, 29, 29, 0.2);
+  --hr-col-3: rgba(29, 29, 29, 0.1);
+
+  /* border */
+  --border-1-1: 1px solid rgba(48, 48, 48, 0.3);
+  --border-1-2: 1px solid rgba(48, 48, 48, 0.15);
+  --border-1-3: 1px solid rgba(48, 48, 48, 0.08);
+  --border-2-1: 2px solid rgba(48, 48, 48, 0.3);
+  --border-2-2: 2px solid rgba(48, 48, 48, 0.15);
+  --border-2-3: 2px solid rgba(48, 48, 48, 0.08);
+
+  /* transitions */
+  --transition-1: all 0.12s ease-in;
+  --transition-2: all 0.08s ease-in;
+  --transition-3: all 0.08s ease-in;
+
+  /* box-shadow */
+  --shadow-1: rgba(0, 0, 0, 0.3) 0px 3px 7px;
+  --shadow-2: rgba(0, 0, 0, 0.2) 0px 3px 5px;
+  --shadow-3: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --shadow-4: rgba(0, 0, 0, 0.2) 2px 7px 15px -3px;
+  --shadow-5: rgba(149, 157, 165, 0.3) 0px 2px 10px;
+  --shadow-6: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px;
+
+  /* line-height */
+  --lh-1: 1.02;
+  --lh-2: 1.02;
+  --lh-3: 1.04;
+  --lh-4: 1.04;
+  --lh-5: 1.04;
+  --lh-6: 1.62;
+  --lh-7: 1.64;
+  --lh-8: 1.67;
+  --lh-9: 1.68;
+
+  /* letter-spacing */
+  --ls-1: 0.1em;
+  --ls-2: 0.05em;
+  --ls-3: 0.025em;
+  --ls-4: 0em;
+  --ls-5: -0.025em;
+  --ls-6: -0.05em;
+
+  /* cursor selection colors */
+  --selection-main-col: rgba(126, 167, 243, 0.65);
+  --selection-text-col: rgb(255, 255, 255);
+
+  /* colors associated with states */
+  --main-col-danger-bg: rgb(225, 86, 86);
+  --main-col-danger-txt: red;
+  --main-col-success-bg: rgb(111, 225, 86);
+  --main-col-success-txt: rgb(41, 147, 62);
+
+  /* -- fonts */
+  --font-fam-init: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+}
+
+/* 
+
+-- Centering content + full width backgrounds in html
+    
+  <div class="flex-center">
+      <div class="max-width-1">content</div>
+  </div>
+
+-- importing fonts example
+
+  @font-face {
+    font-family: "Poppins-Bold";
+    src: url(../fonts/Poppins-Bold.ttf);
+  }
+
+-- Automatic grid example
+
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+-- flex-center class
+
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+*/
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* make the scrollbar not take up the total space of the page, so that there is no shift once it appears / dissapears */
+  overflow-y: scroll;
+  cursor: default;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-fam-init);
+  background: var(--global-bg-col);
+  color: var(--global-txt-col);
+}
+button:disabled,
+button[disabled] {
+  opacity: 0.67;
+}
+
+@media screen and (max-width: 1410px) {
+  .max-width-1,
+  .max-width-2,
+  .max-width-3 {
+    padding: 0px 40px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .max-width-1,
+  .max-width-2,
+  .max-width-3 {
+    padding: 0px 20px;
+  }
+
+  :root {
+    --fs-1: 54px;
+    --fs-2: 39px;
+    --fs-3: 34px;
+    --fs-4: 27px;
+    --fs-5: 22px;
+    --fs-6: 20px;
+    --fs-7: 18px;
+    --fs-8: 15px;
+    --fs-9: 14px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --fs-1: 34px;
+    --fs-2: 29px;
+    --fs-3: 24px;
+    --fs-4: 22px;
+    --fs-5: 20px;
+    --fs-6: 20px;
+    --fs-7: 18px;
+    --fs-8: 15px;
+    --fs-9: 14px;
+  }
+}

@@ -1,9 +1,11 @@
 import os
 
-# taking inspiration from tailwind, we can define one class to have this type of form (in one line)
-#       .w-1 {width: 1px;}
-# converting the values to variables would look something like this
-#       .class_name-value {css_property: value;}
+"""
+taking inspiration from tailwind, we can define one class to have this type of form (in one line)
+      .w-1 {width: 1px;}
+converting the values to variables would look something like this
+      .class_name-value {css_property: value;}
+"""
 
 css = {
     # file_name

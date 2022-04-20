@@ -1,4 +1,4 @@
-/*  https://tompston.github.io/rufus-css/   */
+/*  https://github.com/tompston/rufus-css */
 
 :root {
   /* max-width for the main content, check comments below :root blocj to see example snippet */
@@ -122,6 +122,12 @@
 
 /* 
 
+-- Current ranges for generated classes 
+
+    - 0-100 ( increment by 2 )
+    - 100-400 ( increment by 5 )
+    - 400-800 ( increment by 10 )
+
 -- Centering content + full width backgrounds in html
     
   <div class="flex-center">
@@ -169,6 +175,7 @@ body {
   background: var(--global-bg-col);
   color: var(--global-txt-col);
 }
+
 button:disabled,
 button[disabled] {
   opacity: 0.67;
@@ -215,6 +222,3 @@ button[disabled] {
     --fs-9: 14px;
   }
 }
-
-/*  Minified content starts here */
-/*  https://cssminifier.org/ */
