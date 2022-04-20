@@ -12,10 +12,15 @@ I like the concept of tailwind, but don't like using rem units. + I wanted somet
 
 ```bash
 # with cmd
-curl https://raw.githubusercontent.com/tompston/rufus-css/main/rufus.css -O rufus.css
+curl https://raw.githubusercontent.com/tompston/rufus-css/main/dist/rufus-content.css -O rufus.css
+curl https://raw.githubusercontent.com/tompston/rufus-css/main/dist/rufus.css -O rufus-content.css
 
 # with bash
-wget https://raw.githubusercontent.com/tompston/rufus-css/main/rufus.css
+wget https://raw.githubusercontent.com/tompston/rufus-css/main/dist/rufus-content.css
+wget https://raw.githubusercontent.com/tompston/rufus-css/main/dist/rufus.css
+
+# or just clone
+git clone https://github.com/tompston/rufus-css.git
 ```
 
 <!--

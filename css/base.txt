@@ -216,7 +216,7 @@ button[disabled] {
     --fs-3: 24px;
     --fs-4: 22px;
     --fs-5: 20px;
-    --fs-6: 20px;
+    --fs-6: 19px;
     --fs-7: 18px;
     --fs-8: 15px;
     --fs-9: 14px;
