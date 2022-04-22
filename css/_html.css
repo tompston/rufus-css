@@ -68,10 +68,10 @@ button {
 code,
 .code {
   font-family: Roboto Mono, Menlo, monospace;
-  background: rgb(243, 243, 243);
-  color: rgb(48, 48, 48);
-  font-size: 14px;
-  padding: 4px 8px;
+  background: var(--code-bg);
+  color: var(--code-txt);
+  font-size: var(--code-fs);
+  padding: var(--code-padding);
   border-radius: 6px;
 }
 .code {
