@@ -32,8 +32,6 @@ css = {
     ],
     "gap": [
         ['gap', 'gap'],
-        # ['gap-h', 'row-gap'],
-        # ['gap-w', 'column-gap'],
     ],
     "height": [
         ['h', 'height'],
@@ -48,7 +46,7 @@ css = {
 }
 
 
-class_value_range = [    
+class_value_range = [
     # values for the loop that will generate the auto-incrementing css classes
     # start , end, increment
     [0,     102,    2],
@@ -56,7 +54,12 @@ class_value_range = [
     [400,   802,    10]
 ]
 
+# if include_unit_in_name is set to true,
+# the css unit is appeded to the class name
+# ( For tailwind compatibility )
+include_unit_in_name = False
 css_unit = "px"
+
 
 for file_name, key_value in css.items():
     # on each run, check if the file (name of the key) already exists
@@ -66,8 +69,10 @@ for file_name, key_value in css.items():
         os.remove(file_path)
 
     for array in key_value:
-        class_name = array[0]   # the first value defined in the array is the class name
-        css_property = array[1] # the second value in the array is the css property
+        # the first value defined in the array is the class name
+        class_name = array[0]
+        # the second value in the array is the css property
+        css_property = array[1]
 
         # if two values are provided in the array
         if len(array) == 2:
@@ -77,9 +82,13 @@ for file_name, key_value in css.items():
             # loop over each array in the class_value_range array and use the defined values for the for loop
             for value_range in class_value_range:
                 for x in range(value_range[0], value_range[1], value_range[2]):
-                    single_css_class = f".{class_name}-{x}{{{css_property}:{x}{css_unit};}}"
-                    # at this point you have access to a single generated css class, so append / save it to the file
-                    file_object.write(single_css_class)
+
+                    if include_unit_in_name:
+                        single_css_class = f".{class_name}-{x}{css_unit}{{{css_property}:{x}{css_unit};}}"
+                        file_object.write(single_css_class)
+                    else:
+                        single_css_class = f".{class_name}-{x}{{{css_property}:{x}{css_unit};}}"
+                        file_object.write(single_css_class)
 
             # file_object.close()
 
@@ -90,8 +99,13 @@ for file_name, key_value in css.items():
 
             for value_range in class_value_range:
                 for x in range(value_range[0], value_range[1], value_range[2]):
-                    single_css_class = f".{class_name}-{x}{{{css_property}:{x}{css_unit};{css_property_2}:{x}{css_unit};}}"
-                    file_object.write(single_css_class)
+
+                    if include_unit_in_name:
+                        single_css_class = f".{class_name}-{x}{css_unit}{{{css_property}:{x}{css_unit};{css_property_2}:{x}{css_unit};}}"
+                        file_object.write(single_css_class)
+                    else:
+                        single_css_class = f".{class_name}-{x}{{{css_property}:{x}{css_unit};{css_property_2}:{x}{css_unit};}}"
+                        file_object.write(single_css_class)
 
         else:
             print("Too many or too little values in the array.")

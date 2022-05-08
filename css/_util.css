@@ -207,8 +207,6 @@
   text-decoration: none;
 }
 
-/* credits https://css-irl.info/animating-underlines/ */
-
 .hover-pointer:hover {
   cursor: pointer;
 }
@@ -289,10 +287,10 @@
   color: white;
 }
 .bg-col-black {
-  background: black;
+  background: rgb(0, 0, 0);
 }
-.text-col-white {
-  color: black;
+.text-col-black {
+  color: rgb(0, 0, 0);
 }
 
 /* -- tw */

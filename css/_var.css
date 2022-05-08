@@ -160,16 +160,13 @@ h5 {
 h6 {
   font-size: var(--fs-6);
 }
-.fs-7,
-h7 {
+.fs-7 {
   font-size: var(--fs-7);
 }
-.fs-8,
-h8 {
+.fs-8 {
   font-size: var(--fs-8);
 }
-.fs-9,
-h9 {
+.fs-9 {
   font-size: var(--fs-9);
 }
 .fs-10 {
@@ -251,7 +248,7 @@ h9 {
   transition: var(--transition-3);
 }
 
-/* hr with a height of 1px, and decreasing color intensity*/
+/* hr with a height of 1px, and decreasing color intensity */
 .hr-1-1 {
   border: 0;
   height: 1px;
@@ -267,7 +264,7 @@ h9 {
   height: 1px;
   background: var(--hr-col-3);
 }
-/* hr with a height of 2px, and decreasing color intensity*/
+/* hr with a height of 2px, and decreasing color intensity */
 .hr-2-1 {
   border: 0;
   height: 2px;
